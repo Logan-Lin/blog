@@ -172,6 +172,11 @@ pre {
   }
 }
 
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 blockquote {
   border-left: 3px solid var(--accent);
   padding-left: 1rem;
