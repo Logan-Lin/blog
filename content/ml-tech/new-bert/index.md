@@ -37,9 +37,9 @@ There are limitations of this encoding, the most apparent one being it cannot ge
 
 Thus, LLMs nowadays mostly use RoPE (rotary positional embeddings) or its variants. In contrast to positional encoding which is a type of absolute position embedding, RoPE is a type of relative position embedding. Below is the formulation of RoPE in the 2D space given in the RoFormer paper.
 
-$$
+{% math() %}
 f_{\{q,k\}}(x_m, m) = \begin{pmatrix} \cos m\theta & -\sin m\theta \\ \sin m\theta & \cos m\theta \end{pmatrix} \begin{pmatrix} W_{\{q,k\}}^{(11)} & W_{\{q,k\}}^{(12)} \\ W_{\{q,k\}}^{(21)} & W_{\{q,k\}}^{(22)} \end{pmatrix} \begin{pmatrix} x_m^{(1)} \\ x_m^{(2)} \end{pmatrix}
-$$
+{% end %}
 
 > RoFormer: Enhanced transformer with Rotary Position Embedding (2024). Su, Jianlin and Ahmed, Murtadha and Lu, Yu and Pan, Shengfeng and Bo, Wen and Liu, Yunfeng.
 
