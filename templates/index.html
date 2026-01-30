@@ -22,7 +22,7 @@
         {% set all_pages = all_pages | concat(with=s2.pages) %}
     {% endif %}
     <ul class="post-list">
-    {% for page in all_pages | sort(attribute="date") | reverse | slice(end=5) %}
+    {% for page in all_pages | sort(attribute="date") | reverse | slice(end=7) %}
         <li>
             <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
             <a href="{{ page.permalink }}">{{ page.title }}</a>
