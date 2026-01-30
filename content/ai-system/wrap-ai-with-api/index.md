@@ -212,11 +212,6 @@ Now if the request body contains invalid data types, FastAPI will reject the req
 > - [FastAPI tutorial](https://www.youtube.com/watch?v=iWS9ogMPOI0)
 > - [Pydantic tutorial](https://www.youtube.com/watch?v=XIdQ6gO3Anc)
 
-> **Extended Reading:**
-> There are many more benefits and functionalities of integrating `pydantic` to define and abstract data models in FastAPI, including reusability and automatic documentation generation. Generally speaking, when implementing API servers, data model abstraction is a preferred practice. Take a look at more things you can do with both libraries combined:
-> - https://data-ai.theodo.com/en/technical-blog/fastapi-pydantic-powerful-duo
-> - https://www.geeksforgeeks.org/python/fastapi-pydantic/
-
 ### API Versioning
 
 As we covered in [Advanced APIs in the Era of AI](@/ai-system/advanced-apis/index.md#api-versioning), API versioning allows you to introduce changes without breaking existing integrations. This is particularly important for AI APIs where models and features are constantly evolving. FastAPI makes implementing URL path versioning straightforward using `APIRouter` with prefixes.
@@ -472,11 +467,6 @@ Now only the request with authentication header `Authorization:Bearer your-secre
 
 The limitation of the above implementation is that your API key is hardcoded. In practice you will want to have a dynamic list of API keys, one for each user, which also enables you to identify each request and keep track of the usage of users.
 
-> **Extended Reading:**
-> Comprehensive overview of authentication and authorization in FastAPI:
-> - https://www.geeksforgeeks.org/python/authentication-and-authorization-with-fastapi/
-> - https://betterstack.com/community/guides/scaling-python/authentication-fastapi/
-
 ### Database Integration
 
 Continue on the above topic, one common practice for recording the list of API keys and their respective users and other information is through databases. In previous [AI og data](https://www.moodle.aau.dk/course/view.php?id=50254) course we already hands-on concepts of databases and interact with databases through SQL queries. You can directly use database connectors and integrate SQL queries into your API server, but similar to the `pydantic` library for managing data models, we also have `sqlalchemy` for managing data models for databases. 
@@ -675,11 +665,6 @@ And in our `/classify` route, add one line of code at the start of the function:
 ```
 
 Now if a user sends more than 5 requests within one minute, their requests will be rejected with a `429 Too Many Requests`. In practice you might also want to record users' rate limit threshold in the `User` data model instead of hardcoding it.
-
-> **Extended Reading:**
-> A few libraries for easier implementation of rate limiting:
-> - https://github.com/laurentS/slowapi
-> - https://github.com/long2ice/fastapi-limiter
 
 ## Exercise
 

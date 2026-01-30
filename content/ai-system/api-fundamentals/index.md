@@ -39,12 +39,6 @@ We should also briefly address the [difference between a URL and a domain](https
 > - [Network ports explained](https://www.youtube.com/watch?v=h5vq9hFROEA)
 > - [Understanding URLs](https://www.youtube.com/watch?v=5Jr-_Za5yQM)
 
-> **Extended Reading:**
-> If you are interested in concepts in computer networking that we left behind, take a look at these materials:
-> - https://www.geeksforgeeks.org/computer-networks/open-systems-interconnection-model-osi/
-> - https://www.geeksforgeeks.org/computer-networks/basics-computer-networking/
-> - https://learn.microsoft.com/en-us/training/modules/network-fundamentals/
-
 ### HTTP Protocol & Methods
 
 To send a letter in the real world, you first have to choose from available postal services, which you will probably choose based on price, delivery time, previous experiences, etc. For APIs, you usually won't spend time choosing postal services (transfer protocols) since they are largely standardized, and that one standard protocol used in most APIs is called **[HTTP (HyperText Transfer Protocol)](https://www.geeksforgeeks.org/html/what-is-http/)**.
@@ -69,12 +63,6 @@ Accept: application/json
 User-Agent: SomeAIApp/1.0
 ```
 Here, `Authorization` is for identifying the user and protecting the API and is usually where we specify our API keys. `Content-Type` and `Accept` specify the format of data we're sending and the expected response, respectively. `User-Agent` identifies the type of application or client we are using to interact with the API.
-
-> **Extended Reading:**
-> Just the `Authorization` header alone could cost us a few modules if we were to explore all types of authorization. For now, just think of it as a place to enter our API keys. We will dive deeper into this topic when we implement our own API server in Module 3: [Wrap AI Models with APIs](@/ai-system/wrap-ai-with-api/index.md), and if you are curious, here are some materials that you can look into:
-> - https://apidog.com/blog/http-authorization-header/
-> - https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/
-> - https://auth0.com/intro-to-iam/what-is-oauth-2
 
 For the `GET` method, only the request line and headers, or sometimes just the request line, is enough. For the `POST` method, since we are sending data, we need the **body** which is the content of the letter itself. As you noticed, in the headers we've stated that the format of the body will be `application/json`, which means our body will look like this:
 ```json
@@ -178,10 +166,6 @@ POST   /api?method=chat             # Generic endpoint
 
 > **Videos:**
 > - [What is a REST API?](https://www.youtube.com/watch?v=lsMQRaeKNDk)
-
-> **Extended Reading:**
-> If you want to use a more SQL query-like API interaction method, where you explicitly define the type and scope of data you want and receive exactly that, consider GraphQL:
-> - https://graphql.org/learn/
 
 ## Interact with APIs in Practice
 
