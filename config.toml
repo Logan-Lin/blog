@@ -1,4 +1,4 @@
-base_url = "https://blog.yanlincs.com"
+base_url = "https://zola.yanlincs.com"
 title = "Yan Lin's Blog"
 description = "Personal blog of Yan Lin, Postdoctoral Researcher at Aalborg University"
 default_language = "en"
