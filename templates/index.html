@@ -7,9 +7,12 @@
 
 <section class="recent-posts">
     <h2>Recent Posts</h2>
-    {% set blog = get_section(path="blog/_index.md") %}
+    {% set ais = get_section(path="ais/_index.md") %}
+    {% set homelab = get_section(path="homelab/_index.md") %}
+    {% set ml_tech = get_section(path="ml-tech/_index.md") %}
+    {% set all_pages = ais.pages | concat(with=homelab.pages) | concat(with=ml_tech.pages) %}
     <ul class="post-list">
-    {% for page in blog.pages | slice(end=5) %}
+    {% for page in all_pages | sort(attribute="date") | reverse | slice(end=5) %}
         <li>
             <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
             <a href="{{ page.permalink }}">{{ page.title }}</a>

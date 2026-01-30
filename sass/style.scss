@@ -5,7 +5,7 @@
   --muted: #666;
   --border: #e5e5e5;
   --code-bg: #f5f5f5;
-  --max-width: 42rem;
+  --max-width: 50rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,6 +57,7 @@ header nav {
 
   .site-title {
     font-weight: 600;
+    margin-right: auto;
   }
 }
 
