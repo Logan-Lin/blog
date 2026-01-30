@@ -50,14 +50,23 @@ a {
 
 header nav {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem 1.5rem;
   margin-bottom: 3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 
   .site-title {
+    font-size: 1.25rem;
     font-weight: 600;
     margin-right: auto;
+  }
+
+  @media (max-width: 600px) {
+    .site-title {
+      flex-basis: 100%;
+    }
   }
 }
 

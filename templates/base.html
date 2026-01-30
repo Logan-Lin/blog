@@ -22,9 +22,11 @@
     <header>
         <nav>
             <a href="{{ get_url(path='/') }}" class="site-title">{{ config.title }}</a>
-            <a href="{{ get_url(path='ais') }}">AI Systems</a>
-            <a href="{{ get_url(path='homelab') }}">Homelab</a>
-            <a href="{{ get_url(path='ml-tech') }}">ML Tech</a>
+            {% set root = get_section(path="_index.md") %}
+            {% for path in root.subsections %}
+            {% set s = get_section(path=path) %}
+            <a href="{{ s.permalink }}">{{ s.title }}</a>
+            {% endfor %}
         </nav>
     </header>
     <main>

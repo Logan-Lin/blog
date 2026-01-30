@@ -7,10 +7,20 @@
 
 <section class="recent-posts">
     <h2>Recent Posts</h2>
-    {% set ais = get_section(path="ais/_index.md") %}
-    {% set homelab = get_section(path="homelab/_index.md") %}
-    {% set ml_tech = get_section(path="ml-tech/_index.md") %}
-    {% set all_pages = ais.pages | concat(with=homelab.pages) | concat(with=ml_tech.pages) %}
+    {% set root = get_section(path="_index.md") %}
+    {% set all_pages = [] %}
+    {% if root.subsections[0] is defined %}
+        {% set s0 = get_section(path=root.subsections[0]) %}
+        {% set all_pages = all_pages | concat(with=s0.pages) %}
+    {% endif %}
+    {% if root.subsections[1] is defined %}
+        {% set s1 = get_section(path=root.subsections[1]) %}
+        {% set all_pages = all_pages | concat(with=s1.pages) %}
+    {% endif %}
+    {% if root.subsections[2] is defined %}
+        {% set s2 = get_section(path=root.subsections[2]) %}
+        {% set all_pages = all_pages | concat(with=s2.pages) %}
+    {% endif %}
     <ul class="post-list">
     {% for page in all_pages | sort(attribute="date") | reverse | slice(end=5) %}
         <li>
