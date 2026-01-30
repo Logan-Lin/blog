@@ -7,6 +7,13 @@
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml') }}">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ get_url(path='favicon-96x96.png') }}" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}">
+    <link rel="shortcut icon" href="{{ get_url(path='favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='apple-touch-icon.png') }}">
+    <meta name="apple-mobile-web-app-title" content="YL Blog">
+    <link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
     <!-- KaTeX for math rendering -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
