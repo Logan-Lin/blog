@@ -1,7 +1,7 @@
 +++
 title = "Shortcuts in ODE and SDE"
 date = 2025-07-01
-description = ""
+description = "Idea of finding shortcuts that universally apply to time-dependent differential equations"
 +++
 > **TL;DR:** In the context of generative modeling, we examine ODEs, SDEs, and two recent works that share the idea of learning shortcuts that traverse through vector fields defined by ODEs faster. We then discuss the generalization of this idea to both ODE- and SDE-based models.
 

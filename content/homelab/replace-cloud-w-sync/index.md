@@ -1,7 +1,7 @@
 +++
 title = "Replace Cloud with Local File Sync"
 date = 2026-01-11
-description = "Local file sync is more robust and user-friendly than cloud-based solutions, for personal use and small files at least."
+description = "Local file sync is more robust than cloud-centric solutions"
 +++
 
 Most software that relies heavily on cloud infrastructure works like this: the full data is stored on the cloud, and only the data needed for now is fetched or updated by the software.
