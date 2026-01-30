@@ -13,7 +13,7 @@ But before you go ahead and deploy your AI API server on all kinds of machines a
 
 Recall the AI API server we implemented in [Wrap AI Models with APIs](@/ai-system/wrap-ai-with-api/index.md). You probably ran it directly on your machine, installed the required Python packages locally, and hoped everything would work a few months later. But what happens when you update your machine's operating system, or you want to deploy it on a different machine with a different operating system, or when your group members try to run it but have conflicting Python versions? Saying *it (used to) work on my machine* certainly doesn't help.
 
-![Works on my machine](works-on-my-machine.png)
+![Works on my machine](works-on-my-machine.webp)
 
 Are there techniques that can ensure that the runtime environment for our programs is consistent regardless of the operating system and OS-level runtime, so we can deploy our programs to any computer with the confidence that they just work? Yes, and you guessed it: packaging and containerization techniques.
 
@@ -33,7 +33,7 @@ Containers solve this by creating isolated environments that package your applic
 
 Think of containers like this: at a traditional Chinese dinner, everyone shares dishes from the center of the table. But, what if one person needs gluten-free soy sauce while another needs regular? What if someone accidentally adds peanuts to a shared dish when another guest has allergies? Containers are like giving each person their own Western-style plated meal with exactly the seasonings and portions they need. No sharing conflicts, no contamination between dishes, and everyone gets precisely what works for them, while still sitting at the same table.
 
-![Container analogy](container-analogy.png)
+![Container analogy](container-analogy.webp)
 
 The benefits of containers quickly made containerization become the industry standard for large-scale software deployment. Today, there is a very high chance that one of the applications you use everyday is running in containers. It is [reported](https://www.docker.com/blog/2025-docker-state-of-app-dev/) that by 2025, container usage in the IT industry has reached 92%. With the help of containers, companies can deploy updates without downtime, handle more users by scaling automatically, and run the same software reliably across different hardware infrastructures.
 
@@ -60,7 +60,7 @@ Similarly, each container image is a system of layers. Each layer represents a s
 
 Since containers running on one machine usually have common layers, especially the base layers such as Python runtime, containers will share the common layers so that only one copy of the layer exists. This means that duplicate layers do not have to be stored so storage space is saved. Also, an update to each container don't involve rebuilding of the whole container, just the layers that have been modified.
 
-![Container layers](container-layers.png)
+![Container layers](container-layers.webp)
 
 > **Extended Reading:**
 > When a container runs, it obviously needs to modify files in the layers, like storing temporary data. But it seems that this will break the reusability of layers. Thus, there is actually a [temporary writable layer](https://medium.com/@princetiwari97940/understanding-docker-storage-image-layers-copy-on-write-and-how-data-changes-work-caf38c2a3477) on top of the read-only layers when a container is running. All changes happen in this writable layer during the running of a container image, while the underlying layers of the image itself is untouched.

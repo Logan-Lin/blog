@@ -17,13 +17,13 @@ In this module we will learn how to deploy our system on to the ["cloud"](https:
 
 When we talk about "the cloud," we're really talking about computers in [data centers](https://en.wikipedia.org/wiki/Data_center) that you can access over the internet. The term comes from old network diagrams where engineers would draw a cloud shape to represent "the internet" or any network whose internal details weren't important at that moment. Over time, this symbol became associated with computing resources accessed remotely.
 
-![Cloud diagram](cloud-diagram.png)
+![Cloud diagram](cloud-diagram.webp)
 
 Cloud infrastructure emerged from a practical problem. Companies like Amazon and Google built massive computing facilities to handle peak loads (holiday shopping spikes, search traffic surges), but these expensive resources sat mostly idle during normal times. They realized they could rent out this spare capacity to others, and the modern cloud industry was born. What started as monetizing excess capacity evolved into a fundamental shift in how we provision computing resources.
 
 The key technical innovation that made cloud practical is [virtualization](https://en.wikipedia.org/wiki/Virtualization). This technology allows one physical machine to be divided into many isolated virtual machines, each acting like a separate computer with its own operating system. A single powerful server might run dozens of virtual machines for different customers simultaneously. This sharing model dramatically improved efficiency, since physical servers could be fully utilized rather than sitting idle.
 
-![Virtualization](virtualization.png)
+![Virtualization](virtualization.webp)
 
 You might recall from [Packaging & containerization](@/ai-system/packaging-containerization/index.md) that containers also provide isolation, but they work at a different level. Virtual machines virtualize the entire hardware, giving each VM its own complete operating system. Containers, in contrast, share the host's operating system kernel and only isolate the application and its dependencies. This makes VMs heavier but more isolated, suitable for running entirely different operating systems or providing stronger security boundaries. Containers are lighter and faster, ideal for packaging applications. In practice, cloud infrastructure often uses both: VMs to divide physical servers among customers, and containers running inside those VMs to package and deploy applications.
 
@@ -129,7 +129,7 @@ We'll use the image classification API server from [Wrap AI Models with APIs](@/
 
 When creating a VM through your cloud provider's interface, you'll need to make several decisions about its configuration. These choices affect both performance and cost, but the good news is you can always resize or recreate your VM later if your needs change.
 
-![VM creation](vm-creation.png)
+![VM creation](vm-creation.webp)
 
 **Operating System**: Choose a Linux distribution. [Ubuntu LTS (Long Term Support)](https://ubuntu.com/about/release-cycle) versions like 22.04 or 24.04 are excellent choices because they receive security updates for five years and have extensive community documentation. Most cloud providers offer Ubuntu as a one-click option. Other good alternatives include Debian or Rocky Linux, but Ubuntu's popularity means you'll find more tutorials and troubleshooting help online.
 
@@ -462,7 +462,7 @@ Your API server is now running and accessible at `http://your-server-ip:8000`. T
 
 **Professional Expectations**: Users expect to see a padlock icon in their browser's address bar. Browsers display prominent warnings for HTTP sites, damaging trust before users even interact with your service. Search engines also penalize HTTP sites in rankings.
 
-![HTTPS warning](https-warning.png)
+![HTTPS warning](https-warning.webp)
 
 To make your API production-ready, you need HTTPS, which requires a domain name and an SSL/TLS certificate. Let's walk through the process.
 
@@ -488,7 +488,7 @@ Before obtaining an SSL certificate, you need a domain name. Certificates are ti
 
 DuckDNS also provides an API for updating your IP if it changes, useful for home servers. The main limitation is that your domain will be longer (e.g., `my-ai-api.duckdns.org`) and less professional than a custom domain. For learning and testing HTTPS setup, DuckDNS is perfect.
 
-![DuckDNS](duckdns.png)
+![DuckDNS](duckdns.webp)
 
 **Paid Option: Domain Registrars**
 
@@ -500,7 +500,7 @@ For production applications, consider purchasing your own domain. As of 2024, se
 
 When choosing a registrar, focus on renewal prices, not just first-year promotional rates.
 
-![Cloudflare registrar](cloudflare-registrar.png)
+![Cloudflare registrar](cloudflare-registrar.webp)
 
 **Setting Up DNS Records**
 

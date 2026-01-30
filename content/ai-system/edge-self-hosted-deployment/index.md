@@ -22,7 +22,7 @@ Before diving into implementation, we need to understand what these terms mean a
 
 The term "edge" simply refers to devices at the boundary of a network, where data is actually created or where people interact with systems. Think smartphones, smart home devices, sensors in factories, self-driving cars, or a server sitting in an office closet.
 
-![Edge computing diagram](edge-computing.png)
+![Edge computing diagram](edge-computing.webp)
 
 You've probably seen edge computing in action without realizing it. A [Raspberry Pi](https://www.raspberrypi.com/), that tiny €50 computer the size of a credit card, can run AI models for home projects. The [Raspberry Pi AI Camera](https://www.raspberrypi.com/documentation/accessories/ai-camera.html) runs object detection directly on the camera itself, spotting people, cars, or pets in real-time without ever sending video to the cloud. Tech YouTuber Jeff Geerling has built some impressive setups, like [a Raspberry Pi AI PC with multiple neural processors](https://www.jeffgeerling.com/blog/2024/55-tops-raspberry-pi-ai-pc-4-tpus-2-npus) for local AI processing. For more demanding applications, [Nvidia Jetson](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/) boards pack serious GPU power into a small package. The [Jetson community](https://developer.nvidia.com/embedded/community/jetson-projects) has built everything from bird identification systems that recognize 80 species by sound, to indoor robots that map your home and remember where you left things.
 
@@ -34,11 +34,11 @@ Here's something you might not have realized: you've been doing self-hosted depl
 
 The beauty of self-hosting is that it works at any scale. At the simplest level, you're repurposing hardware you already have. That old laptop collecting dust in a drawer? Install Linux on it and you have a perfectly capable home server. An old desktop that would otherwise go to the landfill can run your AI models, host your files, or serve your applications. Even a Raspberry Pi or a NAS (Network Attached Storage) device can run containerized services.
 
-![Home server setup](home-server.png)
+![Home server setup](home-server.webp)
 
 But self-hosting isn't just about recycling old hardware. Building a new system from scratch can make economic sense too. Consider storage: major cloud providers charge around €18-24 per terabyte per month (budget providers like Backblaze start around €5/TB). If you need 10TB of storage from a major provider, that's €180-240 monthly, adding up to €2,160-2,880 per year. You could build a dedicated storage server with multiple hard drives for €900-1,400, breaking even in under a year. After that, it's essentially free (minus electricity). Plus, transferring files over your home network is dramatically faster than uploading or downloading from the cloud. Gigabit ethernet gives you around 100MB/s transfer speeds, while most home internet uploads max out at 10-50MB/s.
 
-![Storage cost comparison](storage-cost.png)
+![Storage cost comparison](storage-cost.webp)
 
 Beyond economics, self-hosting gives you complete control. Your data stays on your hardware, in your home or office. There are no monthly bills that can suddenly increase, no vendor lock-in forcing you to use proprietary APIs, and no worrying about whether a cloud provider will shut down your account. For learners, self-hosting offers hands-on experience with real infrastructure that you can't get from managed cloud services. And if you need specialized hardware like GPUs for AI work, owning the equipment often makes more sense than paying cloud providers' premium hourly rates, especially if you're using it regularly.
 
@@ -61,11 +61,11 @@ The hardware you choose depends on your use case, budget, and what you might alr
 
 For learning and light workloads, a **[Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-5/)** (around €50-95 for the Pi 5 with 4-8GB RAM) is hard to beat. It's tiny, power-efficient (using about 3-5 watts), and runs a full Linux operating system. Perfect for running lightweight AI models, home automation, or small API servers. The Pi 5 with 8GB RAM can comfortably handle our image classification API from earlier modules.
 
-![Raspberry Pi](raspberry-pi.png)
+![Raspberry Pi](raspberry-pi.webp)
 
 If you need more power for AI workloads, **[Nvidia Jetson](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/)** boards (around €230-240 for the [Jetson Orin Nano Super Developer Kit](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/nano-super-developer-kit/)) come with integrated GPUs designed specifically for AI inference. They're overkill for simple projects but shine when running larger models or processing video streams in real-time.
 
-![Nvidia Jetson](jetson.png)
+![Nvidia Jetson](jetson.webp)
 
 Don't overlook that **old laptop or desktop** sitting unused. An x86 machine from the last decade probably has more RAM and storage than a Raspberry Pi, runs cooler than a gaming desktop, and costs nothing if you already own it. Laptops are particularly attractive because they're power-efficient and come with a built-in battery (basically a free UPS). [Repurposing an old laptop as a Linux server](https://dev.to/jayesh_w/this-is-how-i-turned-my-old-laptop-into-a-server-1elf) is a popular project that teaches you server management without any upfront cost. Old workstations with dedicated GPUs can even handle serious AI workloads.
 
@@ -97,7 +97,7 @@ For your custom images, you have two options. The simple approach is building di
 
 A quick way to check if an image supports your architecture: look at the image's Docker Hub page. For example, the [official Python image](https://hub.docker.com/_/python) shows supported platforms including `linux/amd64` (x86), `linux/arm64` (64-bit ARM like Raspberry Pi 4/5), and `linux/arm/v7` (32-bit ARM like older Pis). If your architecture isn't listed, you'll need to build the image yourself or find an alternative.
 
-![Docker Hub platform support](docker-hub-platforms.png)
+![Docker Hub platform support](docker-hub-platforms.webp)
 
 ### Deploying Your Container
 
@@ -115,7 +115,7 @@ If you just want to use your services at home or within your organization's netw
 
 Every device on your network gets a local IP address, usually something like `192.168.1.100` or `10.0.0.50`. To find your device's IP, SSH into it and run `ip addr show` (or `ip a` for short), which shows all network interfaces and their addresses. Look for the interface connected to your network (often `eth0` for ethernet or `wlan0` for WiFi) and find the line starting with `inet`. Alternatively, check your router's admin interface, which usually lists all connected devices with their IPs and hostnames.
 
-![IP address output](ip-addr.png)
+![IP address output](ip-addr.webp)
 
 Once you have the IP, access your service just like you would a cloud server, but using the local address. If your API runs on port 8000, visit `http://192.168.1.100:8000` from any device on the same network. SSH works the same way: `ssh username@192.168.1.100`. This is the same remote access concept we covered in [Cloud Deployment](@/ai-system/cloud-deployment/index.md), just with a local IP instead of a public one.
 

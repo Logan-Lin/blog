@@ -11,7 +11,7 @@ Imagine you've trained a new version of your AI model that should be faster and 
 
 Simply replacing your old system with the new one is risky. In July 2024, a [routine software update from cybersecurity firm CrowdStrike](https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages) caused widespread system crashes, grounding flights and disrupting hospitals worldwide. While AI deployments might not have such dramatic impacts, pushing an untested model update to all users simultaneously can lead to degraded user experience, complete service outages, or lost trust if users encounter errors.
 
-![CrowdStrike outage](crowdstrike.png)
+![CrowdStrike outage](crowdstrike.webp)
 
 This is where deployment strategies come in. These are industry-proven patterns that major tech companies use to update their systems safely. They let you roll out updates gradually to minimize impact, test new versions without affecting real users, compare performance between versions, and switch back quickly if something goes wrong.
 
@@ -27,7 +27,7 @@ Let's explore four fundamental deployment patterns that you can use when updatin
 
 In a blue-green deployment, you maintain two identical production environments called "blue" and "green." At any time, only one is live and serving user traffic. When you want to deploy a new version of your AI system, you deploy it to the idle environment, test it thoroughly, and then switch all traffic to that environment in one instant cutover. The switch is typically done by updating your load balancer or DNS settings to point to the new environment.
 
-![Blue-green deployment](blue-green.png)
+![Blue-green deployment](blue-green.webp)
 
 Suppose your blue environment is currently serving users with version 1.0 of your AI model. You deploy version 2.0 to the green environment and run tests to verify everything works correctly. Once you're confident, you update your load balancer to route all traffic to green. Now green is live and blue sits idle. If users report issues with version 2.0, you can immediately switch traffic back to blue. The entire rollback takes seconds.
 
@@ -41,7 +41,7 @@ The term "[canary deployment](https://semaphore.io/blog/what-is-canary-deploymen
 
 In a canary deployment, you gradually roll out a new version to an increasing percentage of users. You might start by routing 5% of traffic to the new version while 95% continues using the old version. You monitor the canary group closely for errors, performance issues, or user complaints. If everything looks good, you increase the percentage to 25%, then 50%, then 100%. If problems emerge at any stage, you can halt the rollout and route all traffic back to the old version.
 
-![Canary deployment](canary.png)
+![Canary deployment](canary.webp)
 
 Imagine you've deployed a new AI model that you believe is more accurate. You configure your load balancer to send 10% of requests to the new model while the rest go to the old model. Over the next few hours, you monitor response times, error rates, and user feedback from the canary group. The new model performs well, so you increase to 50%. After another day of monitoring shows no issues, you complete the rollout to 100% of users.
 
@@ -55,7 +55,7 @@ The challenge with canary deployment is that it requires good monitoring and met
 
 In a shadow deployment, you deploy the new version alongside your current production system. Every request that comes to your system gets processed by both versions. Users receive responses only from the stable version, while responses from the new version are logged and analyzed but never used. This lets you test how the new version behaves under real production load and compare its performance to the current version without any user impact.
 
-![Shadow deployment](shadow.png)
+![Shadow deployment](shadow.webp)
 
 Suppose you've built a new AI model and want to check it produces better results before showing it to users. You deploy it in shadow mode, where every user request gets sent to both the old model and the new model. Users see only the old model's responses. Meanwhile, you collect data comparing response times, resource usage, and output quality between the two models. After a week of shadow testing shows the new model is faster and more accurate, you confidently move it to production.
 
@@ -69,7 +69,7 @@ The downside is infrastructure cost and complexity. You're running two complete 
 
 In A/B testing deployment, you run two versions of your system side by side and split users between them. Unlike canary deployment where the goal is to gradually roll out a new version safely, A/B testing aims to compare performance between versions to make data-driven decisions. You might run both versions at 50/50 for weeks or months, collecting metrics on user satisfaction, response quality, speed, or business outcomes. The version that performs better according to your chosen metrics becomes the winner.
 
-![A/B testing](ab-testing.png)
+![A/B testing](ab-testing.webp)
 
 Suppose you have two AI models: model A is faster but slightly less accurate, while model B is more accurate but slower. You're not sure which one will provide better user experience. You deploy both models and randomly assign 50% of users to each. Over the next month, you track metrics like user satisfaction ratings, task completion rates, and how often users retry their requests. The data shows that users with model B complete tasks more successfully and rate their experience higher, even though responses take a bit longer. Based on this evidence, you choose model B as the primary model.
 

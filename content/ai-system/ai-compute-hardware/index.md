@@ -9,10 +9,10 @@ description = ""
 
 Unless you have been living off-grid for the last few years, you have probably been tired of hearing "AI computers" or something similar.
 
-![](ai-pc-1.png)
-![](ai-pc-2.png)
-![](ai-pc-3.png)
-![](ai-pc-4.png)
+![](ai-pc-1.webp)
+![](ai-pc-2.webp)
+![](ai-pc-3.webp)
+![](ai-pc-4.webp)
 
 Despite those vendors trying to convince you that you need a new generation of computers to catch up with the AI hype. In the last year of WWII, [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann) introduced the [Von Neumann architecture](https://www.geeksforgeeks.org/computer-organization-architecture/computer-organization-von-neumann-architecture/). 80 years later, most computers on Earth are still based on this architecture, including most so-called AI computers.
 
@@ -24,7 +24,7 @@ In 1945, John von Neumann documented what would become the most influential comp
 
 The below illustration shows the Von Neumann architecture. To help you understand the concepts in this architecture, we will use an analogy to a restaurant kitchen. Imagine a busy restaurant kitchen, with orders and recipes (instruction) coming by and ingredients (data) ready to be cooked. With chefs (CPU) following orders and recipes and prepare dishes, a pantry and a counter (memory unit) for storing ingredients and recipes, waiters (input/output devices) bringing in orders and deliver dishes, and corridors (bus) connecting all staff and rooms.
 
-![](von-neumann.png)
+![](von-neumann.webp)
 
 ### Instruction & Data
 
@@ -85,13 +85,13 @@ A [**bus system**](https://www.geeksforgeeks.org/computer-organization-architect
 
 Another analogy for any of you who have played [Factorio](https://www.factorio.com/) (a factory management/automation game): for scalable production, you will usually also have a bus system connecting storage boxes, I/O endpoints, and machines actually producing or consuming stuff. Such system make it easy to add a new sub-system to existing ones.
 
-![](factorio-bus.png)
+![](factorio-bus.webp)
 
 ### Von Neumann Architecture in Practice
 
 To showcase how this architecture is implemented in real-world, we will use the [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/)--a small yet complete computer--as an example.
 
-![](raspberry-pi.png)
+![](raspberry-pi.webp)
 
 To start, we have **CPU** in the center-left of the board (labelled *BCM2712 processor* in the figure). Worth noting that like most modern CPUs, this CPU has multiple cores: like multiple chefs working together.
 
@@ -130,17 +130,17 @@ The fundamental mismatch between CPU architecture and AI workload calls for spec
 
 GPU is the representative type of hardware specialized for AI computing. You could tell from its name that it is originally designed for processing computer graphics. More specifically, it was originally designed in the 1980s to accelerate 3D graphics rendering for video games. Rendering a 3D video game involves calculation of lighting, shading, and texture mapping, and display millions of pixels, with [highly optimized algorithms](https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-10-parallel-split-shadow-maps-programmable-gpus) that breaks such calculation into small units that are composed of simple instructions and can be done in parallel.
 
-![](gpu-rendering.png)
+![](gpu-rendering.webp)
 
 To compute such algorithms more efficiently, GPUs are designed to excel at parallel processing. While [a modern CPU](https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x3d.html) usually features less than 100 powerful cores, [a modern GPU](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) usually contains thousands of weak cores. Each core can only handle simple instructions--just like a primary school student, but all the cores combined can finish a parallelized task much faster than a CPU.
 
-![](cpu-vs-gpu.png)
+![](cpu-vs-gpu.webp)
 
 The memory on a GPU is also designed around high-bandwidth, so that large chunks of data can be accessed quickly. For example, the bandwidth of [DDR memory](https://en.wikipedia.org/wiki/DDR5_SDRAM) for CPUs sits around 50 to 100 GB/s, while the [GDDR memory](https://en.wikipedia.org/wiki/GDDR7_SDRAM) for GPUs can deliver up to 1.5 TB/s bandwidth, and the [HBM memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory) specifically designed for AI workloads can deliver up to 2 TB/s bandwidth.
 
 Interestingly, the need for parallel processing and high-bandwidth of computer graphics aligns quite well with AI computing. Thus, GPU has become the dominant type of specialized hardware for AI workloads in recent years. Sadly this leads to major GPU brands don't give a sh\*t about gamers and general consumers anymore.
 
-![](nvidia-jensen.png)
+![](nvidia-jensen.webp)
 
 ### Tensor Processing Unit (TPU)
 
@@ -148,7 +148,7 @@ Although GPU accidentally became perfect for AI workloads by repurposing compute
 
 One example is Google's [TPU](https://cloud.google.com/tpu). TPU adopts an architecture where thousands of simple processor cores aligned in a grid, and the incoming data and instructions flow through the grid like waves: each processor core does a small calculation and passes the result to its neighbors.
 
-![](tpu-architecture.png)
+![](tpu-architecture.webp)
 
 Hardware like TPUs is highly specialized in AI computing, which means they can be more efficient for AI workloads compared to GPU, which still need to handle graphics and other general computing tasks. However, this also means they are impractical for any other tasks. Nowadays TPUs are largely seen in data centers, especially those built by Google themselves.
 

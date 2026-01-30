@@ -12,7 +12,7 @@ In [Interact with AI Systems](@/ai-system/interact-with-ai-systems/index.md) we'
 > **Example:**
 > ChatGPT can be accessed through OpenAI's official website, mobile/desktop apps, other AI-based applications (such as Perplexity), Python scripts, or even command line scripts, all through the same family of APIs OpenAI has published.
 
-![API overview](api-overview.png)
+![API overview](api-overview.webp)
 
 ## The Three Pillars of APIs
 
@@ -30,7 +30,7 @@ Finally, we have ports. Just as some people run several businesses in the same l
 
 We should also briefly address the [difference between a URL and a domain](https://www.geeksforgeeks.org/computer-networks/difference-between-domain-name-and-url/) here. Think of the domain `api.openai.com` as the building address like *Fredrik Bajers Vej 7K* that usually corresponds to a certain group of hardware resources. The full URL is like an address with floor and room number like *Fredrik Bajers Vej 7K, 3.2.50*, which in the below example specifies the version of the API (v1) and the specific function (conversation completion).
 
-![URL structure](url-structure.png)
+![URL structure](url-structure.webp)
 
 > **Videos:**
 > - [The OSI model of computer networks](https://www.youtube.com/watch?v=keeqnciDVOo)
@@ -177,11 +177,11 @@ Before we proceed to integrate interactions with APIs into our applications, we 
 
 [Postman](https://www.postman.com/) is a popular API testing tool. To send an API request with Postman, fill in the components of an [HTTP Request](#http-request) into its interface:
 
-![Postman request](postman-request.png)
+![Postman request](postman-request.webp)
 
 Click send, and after a while you should be able to see the response with components of an [HTTP Response](#http-response):
 
-![Postman response](postman-response.png)
+![Postman response](postman-response.webp)
 
 Feel free to explore other functionalities of Postman yourself. Apart from being able to send API requests in a graphical user interface, you can also form a collection of requests for reuse and structured testing. Postman also comes with collaboration tools that can come in handy when developing in a team. Alternatives to Postman include [Hoppscotch](https://hoppscotch.io/) and [Insomnia](https://insomnia.rest/), [among others](https://apisyouwonthate.com/blog/http-clients-alternatives-to-postman/), all with similar core functionalities.
 

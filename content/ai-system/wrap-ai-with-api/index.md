@@ -11,7 +11,7 @@ In the previous two modules we've seen many industry-standard API techniques and
 > **Example:**
 > This blog site is a fully self-hosted website with basic HTTP-based APIs for handling `GET` requests from browsers. When you visit this post, your browser essentially sends a `GET` request to my server and the server responds with the HTML body for the browser to render. Knowing how to implement your own APIs enables you to do lots of cool stuff that you can control however you want!
 
-![API server kitchen analogy](api-server-kitchen.png)
+![API server kitchen analogy](api-server-kitchen.webp)
 
 APIs are served by API servers—a type of application that listens to API requests sent to them and produces the corresponding responses. They are like kitchens that maintain order and delivery windows for accepting and fulfilling orders, but usually keep the process of how an order is processed behind the doors. Publicly accessible APIs that you've been playing with in previous modules are nothing magic: they are served by API servers run by providers on one or more machines identified by the APIs' corresponding domains. We will compare a few choices of Python frameworks for implementing API servers, and focus on one of them to demonstrate how to implement API fundamentals you learned from previous modules in practice.
 
@@ -93,7 +93,7 @@ uvicorn main:app --reload --host 127.0.0.1 --port 8000
 
 Where `main:app` points to the `app` object we implemented in the `main` program. `--reload` tells the server to automatically restart itself after we modify `main.py` for ease of development. `127.0.0.1` is the IP of "localhost"—the computer we run the server on, and `--host 127.0.0.1` means the server will only accept requests sent from the same computer. `8000` is the port our server listens on, in other words, the port used to identify our server application. You can now try to send a `GET` request to `http://127.0.0.1:8000` with another Python application and the `requests` library, or by accessing the URL in your browser, and you should be able to see the message.
 
-![FastAPI browser response](fastapi-browser.png)
+![FastAPI browser response](fastapi-browser.webp)
 
 You will also be able to see the log messages from your server:
 
@@ -401,7 +401,7 @@ async def classify_image(request: ImageRequest):
 
 Now you have a little image classification API server! I sent it a picture of Spanish-style seafood casserole I made yesterday (it's delicious, by the way) by encoding the image to `base64` format.
 
-![Seafood casserole](seafood-casserole.png)
+![Seafood casserole](seafood-casserole.webp)
 
 And I got the classification result from the server:
 
