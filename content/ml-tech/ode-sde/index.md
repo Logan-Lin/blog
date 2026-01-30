@@ -15,12 +15,12 @@ $$
 
 where $\mu$ is the drift component that is deterministic, and $\sigma$ is the diffusion term driven by Brownian motion (denoted by $W_t$) that is stochastic. This differential equation specifies a *time-dependent vector (velocity) field* telling how a data point $x_t$ should be moved as time $t$ evolves from $t=0$ to $t=1$ (i.e., a *flow* from $x_0$ to $x_1$). Below we give an illustration where $x_t$ is 1-dimensional:
 
-![Vector field between two distributions](vector-field.png)
+![Vector field between two distributions](vector-field.webp)
 > Vector field between two distributions specified by a differential equation.
 
 When $\sigma(x_t,t)\equiv 0$, we get an *ordinary differential equation (ODE)* where the vector field is deterministic, i.e., the movement of $x_t$ is fully determined by $\mu$ and $t$. Otherwise, we get a *stochastic differential equation (SDE)* where the movement of $x_t$ has a certain level of randomness. Extending the previous illustration, below we show the difference in flow of $x_t$ under ODE and SDE:
 
-![ODE vs SDE movements](ode-sde-difference.png)
+![ODE vs SDE movements](ode-sde-difference.webp)
 > Difference of movements in vector fields specified by ODE and SDE. *Source: Song, Yang, et al. "Score-based generative modeling through stochastic differential equations."* Note that their time is reversed.
 
 As you would imagine, once we manage to solve the differential equation, even if we still cannot have a closed form of $p(x_1)$, we can sample from $p(x_1)$ by sampling a data point $x_0$ from $p(x_0)$ and get the generated data point $x_1$ by calculating the following forward-time integral with an integration technique of our choice:
@@ -31,7 +31,7 @@ $$
 
 Or more intuitively, moving $x_0$ towards $x_1$ along time in the vector field:
 
-![Flow of data point](flow-data-point.png)
+![Flow of data point](flow-data-point.webp)
 > A flow of data point moving from $x_0$ towards $x_1$ in the vector field.
 
 ## ODE and Flow Matching
@@ -80,12 +80,12 @@ $$
 
 Although the ground truth vector field is designed to be straight, in practice it usually is not. When the data space is high-dimensional and the target distribution $p(x_1)$ is complex, there will be multiple pairs of $(x_0, x_1)$ that result in the same intermediate data point $x_t$, thus multiple velocities $x_1-x_0$. At the end of the day, the actual ground truth velocity at $x_t$ will be the average of all possible velocities $x_1-x_0$ that pass through $x_t$. This will lead to a "curvy" vector field, illustrated as follows:
 
-![Curvy vector field](curvy-vector-field.png)
+![Curvy vector field](curvy-vector-field.webp)
 > Left: multiple vectors passing through the same intermediate data point. Right: the resulting ground truth vector field. *Source: Geng, Zhengyang, et al. "Mean Flows for One-step Generative Modeling."* Note $z_t$ and $v$ in the figure correspond to $x_t$ and $\mu$ in this post, respectively.
 
 As we discussed, when you calculate the ODE integral, you are using the instantaneous velocity--tangent of the curves in the vector field--of each step. You would imagine this will lead to subpar performance when using a small number $N$ of steps, as demonstrated below:
 
-![Few-step sampling failure](few-step-sampling.png)
+![Few-step sampling failure](few-step-sampling.webp)
 > Native flow matching models fail at few-step sampling. *Source: Frans, Kevin, et al. "One step diffusion via shortcut models."*
 
 ### Shortcut Vector Field
@@ -129,14 +129,14 @@ $$
 
 Where $\text{sg}$ is stop gradient, i.e., detach $\mathbf{u}_\text{target}$ from back propagation, making it a pseudo ground truth. Below is an illustration of the training process provided in the original paper.
 
-![Shortcut model training](shortcut-training.png)
+![Shortcut model training](shortcut-training.webp)
 > Training of the shortcut models with self-consistency loss.
 
 #### Mean Flow
 
 Mean flow is another work sharing the idea of learning velocities that take large step size shortcuts but with a stronger theoretical foundation and a different approach to training.
 
-![Average velocity illustration](average-velocity.png)
+![Average velocity illustration](average-velocity.webp)
 > Illustration of the average velocity provided in the original paper.
 
 Mean flow defines an *average velocity* as a shortcut between times $t$ and $r$ where $t$ and $r$ are independent:
@@ -256,7 +256,7 @@ One caveat of training a "shortcut SDE" is that the ideal result of one-step sam
 
 Below are some preliminary results I obtained from a set of amorphous material generation experiments. You don't need to understand the figure--just know that it shows that applying the idea of learning shortcuts to SDE does yield better results compared to the vanilla SDE when using few-step sampling.
 
-![SDE shortcut results](sde-results.png)
+![SDE shortcut results](sde-results.webp)
 > Structural functions of generated materials, sampled in 10 steps.
 
 ---

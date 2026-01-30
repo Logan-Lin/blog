@@ -69,7 +69,7 @@ These are basically free performance improvement to BERT.
 
 Vanilla BERT uses the original Transformer layer normalization design: a layer normalization is applied after each residual connection. Some modernized BERT models used alternative designs called pre-layer normalization, which moves the normalization layer inside the residual connections.
 
-![normalization](normalization.png)
+![normalization](normalization.webp)
 
 > On layer normalization in the transformer architecture (2020). Xiong, Ruibin and Yang, Yunchang and He, Di and Zheng, Kai and Zheng, Shuxin and Xing, Chen and Zhang, Huishuai and Lan, Yanyan and Wang, Liwei and Liu, Tieyan.
 
@@ -87,7 +87,7 @@ Another aspect of improvement is how the masked tokens are selected. Vanilla BER
 
 If you were to train BERT to perform generative tasks, randomly masking and recovering tokens in input sequences might not be enough, and you should consider more generation-oriented pre-training tasks. An intuitive design is an AR-like generation task where a long and consecutive sub-sequence is fully masked and set for recovering.
 
-![ar-mask](ar-mask.png)
+![ar-mask](ar-mask.webp)
 
 > Unveiling the Potential of BERT-family: A New Recipe for Building Scalable, General and Competitive Large Language Models (2025). Xiao, Yisheng and Li, Juntao and Hu, Wenpeng and Luo, Zhunchen and Zhang, Min.
 

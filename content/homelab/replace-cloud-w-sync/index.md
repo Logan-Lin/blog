@@ -23,7 +23,7 @@ As long as the service can achieve one functionality: always keep a full copy of
 I do want to recommend a service for this purpose: [Syncthing](https://syncthing.net/). This is a peer-to-peer file sync service, which means it has minimal reliance on cloud infrastructure, and your data never has to be stored on computers that are not yours.
 Also, from my experience, all cloud storage services I've used frequently run into stability issues when I try to sync tons of small files at once (e.g., a Git repo), but Syncthing is never unstable no matter how I abuse it.
 
-![Syncthing web UI](syncthing.png)
+![Syncthing web UI](syncthing.webp)
 
 ## Examples
 
@@ -36,17 +36,17 @@ One replacement for Notion that has no reliance on cloud what so ever is [Obsidi
 Every type of data needed by Obsidian, including the notes themselves, settings, plugins, and GUI customization, are stored locally (even better, in plain text).
 Once you use a local file sync service to sync the vault folder of Obsidian, it works like the cloud in that everything is always in-sync, but does not have any of the downsides of the cloud.
 
-![Obsidian](obsidian.png)
+![Obsidian](obsidian.webp)
 
 ### Reference Management: Zotero
 
 [Zotero](https://www.zotero.org/) is a reference management software that can be used in a variety of scenarios. For me, I largely use it to manage academic papers I need to read.
 
-![Zotero](zotero.png)
+![Zotero](zotero.webp)
 
 Zotero has a built-in cloud sync functionality but their price for storage upgrades is quite high. One thing you might not know is, Zotero stores metadata and attachments in the same folder. You can use Syncthing to sync that folder, and completely ignore the official cloud sync functionality.
 
-![Zotero folder structure](zotero-files.png)
+![Zotero folder structure](zotero-files.webp)
 
 ### Paper Writing: Overleaf vs. Local Text Editor
 
@@ -71,7 +71,7 @@ clean:
 	rm -rf out
 ```
 
-![LaTeX editing in VSCode](latex.png)
+![LaTeX editing in VSCode](latex.webp)
 
 Overleaf also provides two types of Git integration for you to sync your local changes with Overleaf projects: sync with a GitHub repo, or directly as a remote git repo. It's totally viable to have a mixed setup, where you primarily use local editors and most of your collaborators use Overleaf.
 
@@ -79,7 +79,7 @@ Overleaf also provides two types of Git integration for you to sync your local c
 
 [Calibre](https://calibre-ebook.com/) is a book management software that can be used to manage your book collection, edit metadata, along with many handy functionalities like bulk conversion.
 
-![Calibre](calibre.png)
+![Calibre](calibre.webp)
 
 Similar to Zotero, Calibre stores all the books and metadata of a library in a local folder, so there is nothing stopping you from syncing the folder across multiple computers. Although this is something explicitly suggested against by the software (a line when you select the location for a library: "Note that putting the calibre library on a Networked drive is not safe"), from my experience, as long as you don't try to open and modify the same library on two synced computers simultaneously, you won't be running into any issues.
 
@@ -92,7 +92,7 @@ It is my own cloud infrastructure, nevertheless it is a cloud infrastructure so 
 Now I use a simpler yet more robust setup. I just sync all my music files in a folder through Syncthing, and use a local music player like [foobar2000](https://www.foobar2000.org/) to read that folder.
 Of course, to save some space, I will always transcode each file to AAC 256k before putting them in the sync folder.
 
-![foobar2000](foobar2000.jpg)
+![foobar2000](foobar2000.webp)
 
 ## Limitations
 

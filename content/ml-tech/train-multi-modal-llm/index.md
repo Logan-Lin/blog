@@ -14,11 +14,11 @@ The most straight-forward method to bridge multi-modal data and text is to train
 
 For images, it is relatively easy to find a large-scale image dataset where each image is coupled with a text description. For example, you can scrape images from Wikipedia which often contain descriptions, or from social media where users write descriptions.
 
-![](image-text-pair.png)
+![](image-text-pair.webp)
 
 There are some practices that you can improve efficiency of this training step. You do not necessary have to train an LLM from scratch, instead, you can train only the adaption layer between a pre-trained image encoder (like CLIP) and a text-only pre-trained LLM, like the design in LLaVA as shown below.
 
-![](llava-architecture.png)
+![](llava-architecture.webp)
 
 > Liu, Haotian, et al. "Visual instruction tuning." _Advances in neural information processing systems_ 36 (2023): 34892-34916.
 
@@ -30,13 +30,13 @@ If you have at least a few data-text pairs to begin with, there are methods to e
 
 You can first train a smaller LLM with available data-text pairs at hand, then use it to generate more descriptions on unlabeled data. For example, with limited image-text pairs, you can first train a image descriptor, and apply it on unlabeled images to generate more image-text pairs. Images without text descriptions have much higher availability compared to those with.
 
-![](blip-bootstrap.png)
+![](blip-bootstrap.webp)
 
 > Li, Junnan, et al. "Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation." _International conference on machine learning_. PMLR, 2022.
 
 Even crazier, you can train a new or use an off-the-shelf conditioned diffusion model that can generate images given descriptions. It should be relatively easy to make up descriptions using text-only LLMs.
 
-![](diffusion-captions.png)
+![](diffusion-captions.webp)
 
 > Ma, Feipeng, et al. "Image captioning with multi-context synthetic data." _Proceedings of the AAAI Conference on Artificial Intelligence_. Vol. 38. No. 5. 2024.
 
@@ -44,7 +44,7 @@ Based on the idea of instruction-tuning that is widely use to train LLMs, LLaVA 
 - Original text description
 - Description of bounding boxes, as a textual representation of the spatial relationships of objects
 
-![](llava-instruction.png)
+![](llava-instruction.webp)
 
 > Liu, Haotian, et al. "Visual instruction tuning." _Advances in neural information processing systems_ 36 (2023): 34892-34916.
 
@@ -60,7 +60,7 @@ You can try to apply the vast available self-supervising methods that have been 
 
 STIC also demonstrates an interesting implementation of self-supervised learning: Use LLMs to generate positive and negative (less preferred) captions of the same image, which can then be used to perform contrastive learning or [direct preference optimization (DPO)](https://arxiv.org/abs/2305.18290).
 
-![](stic-self-training.png)
+![](stic-self-training.webp)
 
 > Deng, Yihe, et al. "Enhancing large vision language models with self-training on image comprehension." _Advances in Neural Information Processing Systems_ 37 (2024): 131369-131397.
 
@@ -72,7 +72,7 @@ Here a work that is not directly related to the topic of this post, but I feel m
 
 DeepSeek-OCR is a recently published and very interesting work. The core idea is, when feeding text input into LLMs, compared to directly using the text, it is actually more token-efficient to paste the text into a Word document, take a screenshot, and feed the image to LLMs.
 
-![](deepseek-ocr.png)
+![](deepseek-ocr.webp)
 
 > Wei, Haoran, Yaofeng Sun, and Yukun Li. "DeepSeek-OCR: Contexts Optical Compression." _arXiv preprint arXiv:2510.18234_ (2025).
 

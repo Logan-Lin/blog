@@ -118,7 +118,7 @@ SEASONNFO
 
   # Handle thumbnail: rename and copy as posters
   local thumb_file=""
-  for ext in jpg webp png; do
+  for ext in.webp webp.webp; do
     if [[ -f "$dir/$name_noext.$ext" ]]; then
       thumb_file="$dir/$name_noext.$ext"
       break
@@ -129,11 +129,11 @@ SEASONNFO
     local thumb_ext="${thumb_file##*.}"
     mv "$thumb_file" "$dir/$name_noext-thumb.$thumb_ext" 2>/dev/null
 
-    if [[ ! -f "$series_dir/poster.jpg" ]] && [[ ! -f "$series_dir/poster.webp" ]] && [[ ! -f "$series_dir/poster.png" ]]; then
+    if [[ ! -f "$series_dir/poster.webp" ]] && [[ ! -f "$series_dir/poster.webp" ]] && [[ ! -f "$series_dir/poster.webp" ]]; then
       cp "$dir/$name_noext-thumb.$thumb_ext" "$series_dir/poster.$thumb_ext"
     fi
 
-    if [[ ! -f "$season_dir/poster.jpg" ]] && [[ ! -f "$season_dir/poster.webp" ]] && [[ ! -f "$season_dir/poster.png" ]]; then
+    if [[ ! -f "$season_dir/poster.webp" ]] && [[ ! -f "$season_dir/poster.webp" ]] && [[ ! -f "$season_dir/poster.webp" ]]; then
       cp "$dir/$name_noext-thumb.$thumb_ext" "$season_dir/poster.$thumb_ext"
     fi
   fi
@@ -144,15 +144,15 @@ I also include the thumbnail extraction logic in the implementation. The end res
 
 ```
 PMM_LORD
-├── poster.jpg
+├── poster.webp
 ├── Season 2025
-│   ├── poster.jpg
+│   ├── poster.webp
 │   ├── S2025E1031 - 【PGN】狐狸鸣泣之时——寂静岭f.mp4
 │   ├── S2025E1031 - 【PGN】狐狸鸣泣之时——寂静岭f.nfo
-│   ├── S2025E1031 - 【PGN】狐狸鸣泣之时——寂静岭f-thumb.jpg
+│   ├── S2025E1031 - 【PGN】狐狸鸣泣之时——寂静岭f-thumb.webp
 │   ├── S2025E1127 - 【PGN】卡洛斯传奇略人区——宝可梦传说ZA.mp4
 │   ├── S2025E1127 - 【PGN】卡洛斯传奇略人区——宝可梦传说ZA.nfo
-│   ├── S2025E1127 - 【PGN】卡洛斯传奇略人区——宝可梦传说ZA-thumb.jpg
+│   ├── S2025E1127 - 【PGN】卡洛斯传奇略人区——宝可梦传说ZA-thumb.webp
 │   └── season.nfo
 └── tvshow.nfo
 
@@ -175,14 +175,14 @@ And the episode `.nfo` file will record the title, upload date, and video descri
 
 Finally, in Jellyfin/Emby, we can set up a "TV show" type library, but uncheck all the metadata fetching sources so that the information will only be provided by the `.nfo` files.
 
-![Jellyfin library settings](jellyfin-settings.png)
+![Jellyfin library settings](jellyfin-settings.webp)
 
 And it works!
 
-![Jellyfin result](jellyfin-result.png)
+![Jellyfin result](jellyfin-result.webp)
 
 And of course it also works nicely with third-party clients like Infuse on my mobile devices/TV.
 
-![Infuse client](infuse-client.png)
+![Infuse client](infuse-client.webp)
 
 I packaged all my custom implementation of yt-dlp into a Nix module, which you can take a look in the [this link](https://github.com/Logan-Lin/nix-config/blob/master/modules/yt-dlp.nix) if interested.

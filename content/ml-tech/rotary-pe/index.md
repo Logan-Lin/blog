@@ -39,7 +39,7 @@ This vector is then directly added to the token embedding vector.
 To build intuition for how PE works, consider an analogy to old-fashioned electricity meters or car odometers.
 Imagine a mechanical meter with multiple rotating wheels. The rightmost wheel rotates the fastest, completing a full rotation for each unit of position. The next wheel rotates slower, completing a rotation every 10 units. The wheel to its left rotates even slower, once per 100 units, and so on. Each wheel to the left rotates at an increasingly slower rate than the one before it.
 
-![](odometer.png)
+![](odometer.webp)
 
 In the vanilla PE formulation, different dimensions correspond to these different "wheels" rotating at different frequencies determined by $10000^{2i/d_{\text{model}}}$.
 The sine and cosine functions encode the continuous rotation angle of each wheel.
@@ -80,7 +80,7 @@ The dot-product of two rotated vectors depends on their angle difference, which 
 You can also understand RoPE with the rotating meters analogy above, since it is literally rotating vectors as if they were meter hands.
 After receiving those vectors, the Transformer is like an electrician, who only cares about the relative angle difference of meter hands between two reads, rather than the absolute positions of the meter hands at each read.
 
-![](rope-rotation.png)
+![](rope-rotation.webp)
 
 RoPE can be extended to arbitrary $d$ dimensions, by dividing the vector space into multiple 2-dimensional sub-spaces.
 
@@ -149,7 +149,7 @@ Resonance RoPE addresses this by rounding wavelengths to the nearest integer.
 A wavelength of 10.3 becomes 10. Now positions 0, 10, 20, 30... all show identical rotation angles. When the model sees position 80 or 120 during inference, these align perfectly with positions seen during training. The model doesn't need to generalize to new rotation angles.
 This applies to all dimensions with wavelengths shorter than the training length. For these dimensions, Resonance RoPE provably eliminates the feature gap between training and inference positions. The rounding happens offline during model setup, so there's no computational cost.
 
-![](resonance-rope.png)
+![](resonance-rope.webp)
 
 Resonance RoPE works with any RoPE-based method. Combined with YaRN, it provides a complete solution: YaRN handles the long-wavelength dimensions, Resonance handles the short-wavelength ones.
 Experiments show the combination consistently outperforms YaRN alone on long-context tasks.
@@ -162,7 +162,7 @@ The search process treats the rescale factors as parameters to optimize. Startin
 
 LongRoPE also introduces a progressive extension strategy. Rather than jumping directly from the training length to the target length, it extends in stages: first from 4k to 256k with evolutionary search, then applies the same factors to reach 2048k. The model only needs 1000 fine-tuning steps at 256k tokens to adapt, making the extension process both effective and efficient. This progressive approach reduces the risk of performance degradation that can occur with aggressive single-step extensions.
 
-![](longrope.png)
+![](longrope.webp)
 
 > **References:**
 >

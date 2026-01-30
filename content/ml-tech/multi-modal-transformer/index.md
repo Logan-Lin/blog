@@ -24,11 +24,11 @@ Since images and language modalities represent continuous and discrete data resp
 
 The goal of a multi-modal Transformer is to create a model that can accept multi-modal inputs and produce multi-modal outputs. For example, instead of using a CNN-based image encoder and a Transformer-based language encoder to map image and language modalities to the latent space separately, a multi-modal Transformer would be able to process the combination of image and language (sentence) as a single sequence.
 
-![](multi-modal-fusion.png)
+![](multi-modal-fusion.webp)
 
 > An example of "conventional" multi-modal fusion. Different modality is processed by separate models and fused at some point. Source: *Xiang, Hao, Runsheng Xu, and Jiaqi Ma. "HM-ViT: Hetero-modal vehicle-to-vehicle cooperative perception with vision transformer." CVPR, 2023.*
 
-![](video-poet.png)
+![](video-poet.webp)
 
 > An example of a Transformer that can handle multi-modal inputs and outputs. Different modalities are all projected into tokens and subsequently processed by a unified Transformer encoder. Source: *Kondratyuk, Dan, Lijun Yu, et al. "VideoPoet: A Large Language Model for Zero-Shot Video Generation," ICML, 2024.*
 
@@ -38,13 +38,13 @@ Beyond multi-modal processing, a multi-function Transformer can, for example, fu
 
 A fundamental challenge in unifying multiple modalities within a single Transformer is how to represent different modalities in the same embedding space. For the "QKV" self-attention mechanism to work properly, each item in the input sequence must be represented by an embedding vector of the same dimension, matching the "model dimension" of the Transformer.
 
-![](qkv-attention.png)
+![](qkv-attention.webp)
 
 > Illustration of the QKV self-attention mechanism in Transformer. [Source](https://en.wikipedia.org/wiki/Attention_(machine_learning))
 
 The most common method for mapping language into the embedding space is through tokenization and token embedding. A tokenizer maps a word or word fragment into a discrete token index, and an index-fetching embedding layer (implemented in frameworks like PyTorch with `nn.Embedding`) maps this index into a fixed-dimension embedding vector. In principle, all discrete features can be mapped into the embedding space using this approach.
 
-![](token-embedding.png)
+![](token-embedding.webp)
 
 > Visualization of tokenizer and index-fetching embedding layer. [Source](https://medium.com/@hunter-j-phillips/the-embedding-layer-27d9c980d124)
 
@@ -58,7 +58,7 @@ Vector quantization maintains a "codebook" $\boldsymbol C \in \mathbb R^{n\times
 $$
 i = \arg\min_j ||\boldsymbol z - \boldsymbol C_j||_2
 $$
-![](vector-quantization.png)
+![](vector-quantization.webp)
 
 ### Lookup-Free Quantization
 
@@ -119,7 +119,7 @@ For language generation, Transformers typically use classifier output layers, ma
 
 One approach to reverse vector quantization is readily available in VQ-VAE, since it is an auto-encoder. Given a token $i$, we can look up its embedding in the codebook as $\boldsymbol C_i$, then apply a decoder network to map $\boldsymbol C_i$ back to the continuous feature vector $\boldsymbol z$. The decoder network can be pre-trained in the VQ-VAE framework—pre-train the VQ-VAE tokenizer, encoder, and decoder using auto-encoding loss functions, or end-to-end trained along with the whole Transformer. In the NLP and CV communities, the pre-training approach is more popular, since there are many large-scale pre-trained auto-encoders available.
 
-![](magvit.png)
+![](magvit.webp)
 
 > The encoder-decoder structure of MAGVIT (*Yu et al., "MAGVIT"*), a visual VQ-VAE model. A 3D-VQ encoder quantizes a video into discrete tokens, and a 3D-VQ decoder maps them back to the pixel space.
 
@@ -131,7 +131,7 @@ There are several workarounds to improve the efficiency of multi-modal outputs. 
 
 Another workaround follows the idea of compression. Take video generation as an example. The model generates full features for key frames, and light-weight features for motion vectors that describe subtle differences from those key frames. This is essentially how inter-frame compressed video codecs work, which takes advantage of temporal redundancy between neighboring frames.
 
-![](video-lavit.png)
+![](video-lavit.webp)
 
 > Keys frames and motion vectors used in *Jin et al., "Video-LaVIT."*
 
@@ -141,7 +141,7 @@ Despite continuous efforts to enable representation and generation of images and
 
 An intriguing question arises: why not integrate the structures of language models and diffusion models into one Transformer to reach the best of both worlds? *Zhou et al. in "Transfusion"* explored this idea. The approach is straightforward: build a Transformer that can handle both language and image inputs and outputs. The language component functions as a language model, while the image component serves as a denoiser network for diffusion models. The model is trained by combining the language modeling loss and DDPM loss, enabling it to function either as a language model or a text-to-image denoiser.
 
-![](transfusion.png)
+![](transfusion.webp)
 
 > A Transformer capable of function as a language model and a diffusion denoiser at the same time. Source: *Zhou, Chunting, Lili Yu, et al. "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model," ICLR, 2025.*
 

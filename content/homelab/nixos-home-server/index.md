@@ -6,7 +6,7 @@ description = "How I built a NixOS-based Home Server/Nas"
 
 This is a very concise walkthrough of my main home server running NixOS. I assume the reader already has basic knowledge about NixOS.
 
-![cover](cover.png)
+![cover](cover.webp)
 
 My home server (or many would rather call it a NAS) serves common home server purposes: bulk storage, basic file sharing, media streaming service, and photo backup.
 
@@ -14,7 +14,7 @@ My home server (or many would rather call it a NAS) serves common home server pu
 
 Below is a recent photo of my home server, living in the utility closet together with my network equipments.
 
-![server photo](server-photo.jpg)
+![server photo](server-photo.webp)
 
 It is essentially an Intel N305 custom motherboard with SATA back panel and a 3D-printed enclosure. I bought it on Taobao last time I went back to China to visit my family.
 Not very important here, as long as you stick to common hardware, it should be relatively straightforward to install NixOS and replicate my setup.
@@ -185,7 +185,7 @@ Transmission seems to be more stable, but its interface is so barebones and is m
 
 For photo backup I use [Immich](https://immich.app/). It is a self-hosted alternative to iCloud Photos and Google Photos. Aside from basic photo backup and management, it also has many nice touches, such as face detection, CLIP-based image embedding for semantic search, and recently added OCR for text search. It also comes with quite robust mobile apps for both iOS and Android.
 
-![immich](immich.png)
+![immich](immich.webp)
 
 Right now Immich is the only service I am running with containers rather than native Nix modules (as you can see in [this configuration file](https://github.com/Logan-Lin/nix-config/blob/master/hosts/nixos/hs/containers.nix)). Technically it is possible to set up Immich with pure Nix modules, but for this type of services that rely on specific versions of databases (in this case, PostgreSQL with vector support), I feel containers are the easier route.
 And to be honest, I don't think there is much benefit going with pure Nix module here (especially for Immich which you can still [declare its config](https://github.com/Logan-Lin/nix-config/blob/master/config/immich.nix) even with containers), other than fulfilling the purism many Nix users seem to have.
@@ -212,7 +212,7 @@ The P2P nature of Tailscale also means that, if you have no interest in creating
 I don't want to complicate things so I haven't set up any automated system to check the health status of my home server and send notification if anything goes wrong.
 I do have a [login display module](https://github.com/Logan-Lin/nix-config/blob/master/modules/login-display.nix) that will report important status every time I SSH into my home server.
 
-![login display](login-display.png)
+![login display](login-display.webp)
 
 ## Why NixOS?
 
@@ -222,6 +222,6 @@ Compared to purposefully built home server systems (like Unraid) and pre-built h
 
 Compared to other Linux distributions, NixOS is quite suitable for setting up a home server. Since it is declarative, setting up many things are probably easier than you thought. In other words, for the most part, you only have to care **what** you want to achieve, not **how** you are going to achieve them (this is of course, primarily thanks to the amazing NixOS community). On the other hand, most of the configuration is fully self-contained and tracked in your Nix config repo (supposing you use git). So it is much less prone to oversight during configuration, and you also don't have to explicitly remember your setup for future references. Before switching my home server to NixOS, I've been using Nix-darwin on my Macbook for a while, so I also get to reuse a lot of custom modules, like the [neovim module](https://github.com/Logan-Lin/nix-config/blob/master/modules/nvim.nix).
 
-![terminal comparison](terminal-comparison.png)
+![terminal comparison](terminal-comparison.webp)
 
 > It looks completely identical (why not), to the point I have to set up visual hints (like the highlighted tmux hostname display) to remind myself which host I am currently on.
