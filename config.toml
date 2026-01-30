@@ -9,6 +9,7 @@ feed_filenames = ["rss.xml"]
 
 [markdown]
 highlighting = { theme = "GitHub-Dark" }
+external_links_target_blank = true
 
 [extra]
 author = "Yan Lin"

@@ -30,7 +30,7 @@
         <nav>
             <a href="{{ get_url(path='/') }}" class="site-title">{{ config.title }}</a>
             {% set root = get_section(path="_index.md") %}
-            {% for path in root.subsections %}
+            {% for path in root.subsections | sort %}
             {% set s = get_section(path=path) %}
             <a href="{{ s.permalink }}">{{ s.title }}</a>
             {% endfor %}
