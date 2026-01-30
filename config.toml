@@ -8,8 +8,7 @@ generate_feeds = true
 feed_filenames = ["rss.xml"]
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
+highlighting = { theme = "GitHub-Dark" }
 
 [extra]
 author = "Yan Lin"
