@@ -261,7 +261,7 @@ Below are some preliminary results I obtained from a set of amorphous material g
 
 ---
 
-**References:**
+## References
 
 1. Holderrieth and Erives, "An Introduction to Flow Matching and Diffusion Models."
 2. Song and Ermon, "Generative Modeling by Estimating Gradients of the Data Distribution."
