@@ -17,9 +17,9 @@ I will dive deeper into the rationale and the refactor process below.
 ## Why Refactor?
 
 If it ain't broke, don't fix it. Following this philosophy it is unnecessary to refactor my blog site since it is working perfectly.
-But this is something that stays in my mind for quite a while and now I finally decided to do it.
+But this was something that stays in my mind for quite a while and now I finally decided to do it.
 
-Before this refactor my blog site is generated using [Quartz 4](https://quartz.jzhao.xyz/), a SSG that can turn a set of Markdown notes into static websites, particularly Obsidian-flavored Markdown with WikiLinks and callout blocks.
+Before this refactor my blog site was generated using [Quartz 4](https://quartz.jzhao.xyz/), a SSG that can turn a set of Markdown notes into static websites, particularly Obsidian-flavored Markdown with WikiLinks and callout blocks.
 I will still recommend Quartz 4, if you want to quickly turn your Obsidian vault into a blog site, or if you want to build a wiki site with intertwined inner links jumping between notes. It is a free alternative to [Obsidian's official publish service](https://obsidian.md/publish) (which, aside from being overpriced in my opinion, doesn't even directly support custom domains and requires you to set up a reverse proxy for that purpose).
 
 For my use case, I only want a basic SSG that accepts standard Markdown notes, with the only two add-ons being LaTeX math equation rendering and code block syntax highlighting. Then Quartz 4 starts to feel over-engineered and has too long a list of dependencies. It is also not straightforward to control how the generated site looks and feels, since the rendering pipeline is controlled by multiple TypeScript modules.
