@@ -32,7 +32,7 @@
             {% set root = get_section(path="_index.md") %}
             {% for path in root.subsections | sort %}
             {% set s = get_section(path=path) %}
-            <a href="{{ s.permalink }}">{{ s.title }}</a>
+            <a href="{{ s.permalink }}">{{ s.extra.abbr | default(value=s.title) }}</a>
             {% endfor %}
         </nav>
     </header>

@@ -1,7 +1,10 @@
 +++
-title = "AIsys"
+title = "AI Systems & Infrastructure"
 sort_by = "date"
 paginate_by = 10
+
+[extra]
+abbr = "AIsys"
 +++
 
 Basics of streamlined interaction with AI systems, peripherals that enable such interaction, and deployment of AI systems on real-world infrastructure.
