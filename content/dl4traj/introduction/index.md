@@ -70,6 +70,10 @@ Trajectory prediction estimates future movement from historical data. Variants i
 Several tasks target specific application needs.
 Anomaly detection identifies paths or behaviors that deviate from normal patterns, useful for flagging dangerous driving or monitoring logistics routes. Travel time estimation predicts journey duration along a given path, supporting navigation and ride-hailing services. Trajectory-user linking associates trajectories with their users based on movement patterns, enabling cross-device identification. Trajectory generation synthesizes realistic movement data for traffic simulation or privacy-preserving data sharing.
 
+![tasks](tasks.webp)
+
+> Illustration of trajectory-related tasks.
+
 ## Deep Learning for Trajectories
 
 Traditional trajectory analysis relies on handcrafted features and explicit modeling assumptions, which work reasonably well for structured scenarios but struggle with the scale and complexity of modern trajectory data.
