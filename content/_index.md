@@ -1,5 +1,5 @@
 +++
-title = "Welcome"
+title = "Yan Lin's Blog"
 +++
 
 My name is Yan Lin, and this is my personal blog where I occasionally post my thoughts and findings during research.

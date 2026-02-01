@@ -8,19 +8,11 @@
 <section class="recent-posts">
     <p style=" font-size: 1.1rem; font-weight: bold; ">Recent Posts</p>
     {% set root = get_section(path="_index.md") %}
-    {% set all_pages = [] %}
-    {% if root.subsections[0] is defined %}
-        {% set s0 = get_section(path=root.subsections[0]) %}
-        {% set all_pages = all_pages | concat(with=s0.pages) %}
-    {% endif %}
-    {% if root.subsections[1] is defined %}
-        {% set s1 = get_section(path=root.subsections[1]) %}
-        {% set all_pages = all_pages | concat(with=s1.pages) %}
-    {% endif %}
-    {% if root.subsections[2] is defined %}
-        {% set s2 = get_section(path=root.subsections[2]) %}
-        {% set all_pages = all_pages | concat(with=s2.pages) %}
-    {% endif %}
+    {% set_global all_pages = [] %}
+    {% for subsection_path in root.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        {% set_global all_pages = all_pages | concat(with=subsection.pages) %}
+    {% endfor %}
     <ul class="post-list">
     {% for page in all_pages | sort(attribute="date") | reverse | slice(end=7) %}
         <li>
