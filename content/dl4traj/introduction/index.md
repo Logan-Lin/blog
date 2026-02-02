@@ -17,7 +17,9 @@ To automate the process of trajectory data analysis, including feature extractio
 
 ## What is a Trajectory?
 
-A trajectory consists of a sequence of locations, each associated with a timestamp. Together, these points trace the path of a moving object or person through space and time. Formally, a trajectory can be represented as:
+A trajectory consists of a sequence of locations, each associated with a timestamp. Together, these points trace the path of a moving object or person through space and time.
+A complete trajectory usually records the movement of the target from the beginning to the end of the movement process. For example, a complete taxi trajectory would span from the start of the trip (when the passenger gets into the taxi and the order starts) to the end of the trip (when the passenger gets off the taxi and the order terminates).
+Formally, a trajectory can be represented as:
 
 $$\mathcal{T} = \langle (l_1, t_1), (l_2, t_2), \ldots, (l_n, t_n) \rangle$$
 
@@ -27,9 +29,11 @@ Timestamps can be recorded in two ways. Absolute timestamps use a standard time 
 
 Locations can be represented in several forms depending on the application:
 
-- 2D/3D coordinates: latitude-longitude pairs $(l_{lat}, l_{lon})$ from GPS, optionally with altitude $l_{alt}$ for aerial trajectories
+- 2D/3D coordinates: points $(l_x, l_y)$ or $(l_x, l_y, l_z)$ in a Cartesian coordinate system, such as GPS coordinates $(l_{lat}, l_{lon})$ or local coordinate frames for indoor tracking; altitude $l_{alt}$ may be included for aerial trajectories
 - Road network positions: segment identifiers and offsets within a road network, common in navigation systems
+- Grid cell IDs: discrete cell indices in a spatial grid partitioning, used when exact coordinates are unavailable or unnecessary
 - Points of Interest (POIs): discrete semantic locations such as "Central Station" or "Airport Terminal 2"
+- Areas of Interest (AOIs): region identifiers representing larger zones such as neighborhoods, districts, or functional areas
 
 ### Types of Trajectories
 
