@@ -7,7 +7,7 @@ description = ""
 End-to-end learning means training a model to perform a task from input to output, supervising only on how the output aligns with the task's ground truth.
 End-to-end is typically the most straightforward option for building a deep learning method for a certain task, and that also applies to most tasks related to spatiotemporal trajectories.
 
-<img src="end-to-end.webp" alt="end-to-end" style="max-width: 500px;">
+<img src="end-to-end.webp" alt="end-to-end" style="max-width: min(500px, 100%);">
 
 > Illustration of end-to-end learning of spatiotemporal trajectories.
 
