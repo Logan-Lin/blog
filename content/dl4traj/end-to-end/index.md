@@ -1,5 +1,5 @@
 +++
-title = "End-to-end Learning of Spatiotemporal Trajectories"
+title = "End-to-end Learning of Trajectories"
 date = 2026-02-02
 description = ""
 +++
