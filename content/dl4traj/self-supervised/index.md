@@ -283,7 +283,7 @@ Treating these as different views of the same trajectory encourages the model to
 To implement the framework, one or more encoders map the trajectory views into a shared embedding space where similarity can be computed. When views share the same representation format, a single encoder can process both views. When views use different representations, separate encoders are needed for each format, with their outputs projected to the same space.
 The encoder design choices are similar to those in auto-encoding: recurrent networks, Transformers, or temporal convolutional networks that produce fixed-size embeddings from variable-length sequences.
 
-### Applications: Representation Learning for Downstream Tasks
+### Applications: Trajectory Representation Learning
 
 The representations learned through contrastive learning serve similar purposes to those from auto-encoders: fixed-size embeddings for classification, similarity computation, and clustering.
 In practice, the difference in training objective can lead to different performance characteristics.
