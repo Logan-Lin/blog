@@ -12,27 +12,31 @@
         <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
         {% endif %}
     </header>
-    {% if page.extra.toc | default(value=false) %}
-    <nav class="toc">
-        <p class="toc-title">Table of Contents</p>
-        <ul>
-        {% for h2 in page.toc %}
-            <li>
-                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-                {% if h2.children %}
-                <ul>
-                    {% for h3 in h2.children %}
-                    <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul>
-    </nav>
-    {% endif %}
     <div class="content">
-        {{ page.content | safe }}
+        {% if page.content is containing("<!--TOC_PLACEHOLDER-->") %}
+            {% set parts = page.content | split(pat="<!--TOC_PLACEHOLDER-->") %}
+            {{ parts[0] | safe }}
+            <nav class="toc">
+                <p class="toc-title">Table of Contents</p>
+                <ul>
+                {% for h2 in page.toc %}
+                    <li>
+                        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                        {% if h2.children %}
+                        <ul>
+                            {% for h3 in h2.children %}
+                            <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </nav>
+            {{ parts[1] | safe }}
+        {% else %}
+            {{ page.content | safe }}
+        {% endif %}
     </div>
 </article>
 {% endblock content %}
