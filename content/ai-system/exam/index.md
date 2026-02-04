@@ -2,6 +2,10 @@
 title = "Exam Format"
 date = 2025-09-02
 description = ""
+weight = 50
+
+[extra]
+chapter = ""
 +++
 ## Modality and duration
 

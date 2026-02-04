@@ -1,7 +1,11 @@
 +++
-title = "C.10-Advanced Deployment Strategies"
+title = "Advanced Deployment Strategies"
 date = 2025-11-08
 description = ""
+weight = 32
+
+[extra]
+chapter = "C.10"
 +++
 
 > **TL;DR:**

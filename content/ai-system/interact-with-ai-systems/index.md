@@ -1,7 +1,11 @@
 +++
-title = "A-Interact with AI Systems"
+title = "Interact with AI Systems"
 date = 2025-09-03
 description = ""
+weight = 10
+
+[extra]
+chapter = "A"
 +++
 > **TL;DR:**
 > Learn why standardized interactions between applications are essential for making AI models practical in real-world scenarios, moving beyond simple function calls to robust communication methods that work across different programming languages and distributed systems.

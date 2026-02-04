@@ -2,6 +2,10 @@
 title = "Introduction to AI Systems & Infrastructure"
 date = 2025-09-02
 description = ""
+weight = 1
+
+[extra]
+chapter = ""
 +++
 
 What is AI composed of, and how companies like OpenAI, Anthropic, Google, and Microsoft are pushing AI for millions of people around the globe to use (whether people want it or not)?

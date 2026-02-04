@@ -1,7 +1,11 @@
 +++
-title = "B.7-Edge & Self-hosted Deployment"
+title = "Edge & Self-hosted Deployment"
 date = 2025-10-16
 description = ""
+weight = 27
+
+[extra]
+chapter = "B.7"
 +++
 
 > **TL;DR:** Cloud deployment isn't the only option. Learn about edge computing and self-hosted deployment: running AI systems closer to where data is generated or on your own hardware. Discover when these approaches make sense and how to implement them on devices like Raspberry Pi and home servers.

@@ -2,6 +2,7 @@
 title = "Self-supervised Learning of Trajectories"
 date = 2026-02-03
 description = ""
+weight = 3
 
 [extra]
 chapter = "3"

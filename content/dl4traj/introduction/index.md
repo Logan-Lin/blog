@@ -2,6 +2,7 @@
 title = "Introduction to Deep Learning for Trajectories"
 date = 2026-02-01
 description = ""
+weight = 1
 
 [extra]
 chapter = "1"

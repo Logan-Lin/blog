@@ -1,7 +1,11 @@
 +++
-title = "B.6-Cloud Deployment"
+title = "Cloud Deployment"
 date = 2025-10-09
 description = ""
+weight = 26
+
+[extra]
+chapter = "B.6"
 +++
 
 > **TL;DR:**

@@ -1,7 +1,11 @@
 +++
-title = "B-Infrastructure & Deployment of AI"
+title = "Infrastructure & Deployment of AI"
 date = 2025-09-25
 description = ""
+weight = 20
+
+[extra]
+chapter = "B"
 +++
 
 > **TL;DR:**

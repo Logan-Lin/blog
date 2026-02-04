@@ -1,7 +1,11 @@
 +++
-title = "B.5-Packaging & Containerization"
+title = "Packaging & Containerization"
 date = 2025-10-02
 description = ""
+weight = 25
+
+[extra]
+chapter = "B.5"
 +++
 
 > **TL;DR:**

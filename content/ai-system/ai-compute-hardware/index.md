@@ -1,7 +1,11 @@
 +++
-title = "B.4-AI Compute Hardware"
+title = "AI Compute Hardware"
 date = 2025-09-25
 description = ""
+weight = 24
+
+[extra]
+chapter = "B.4"
 +++
 
 > **TL;DR:**

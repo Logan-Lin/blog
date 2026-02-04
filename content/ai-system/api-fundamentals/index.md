@@ -1,7 +1,11 @@
 +++
-title = "A.1-API Fundamentals"
+title = "API Fundamentals"
 date = 2025-09-03
 description = ""
+weight = 11
+
+[extra]
+chapter = "A.1"
 +++
 
 > **TL;DR:**

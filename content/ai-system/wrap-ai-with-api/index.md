@@ -1,7 +1,11 @@
 +++
-title = "A.3-Wrap AI Models with APIs"
+title = "Wrap AI Models with APIs"
 date = 2025-09-18
 description = ""
+weight = 13
+
+[extra]
+chapter = "A.3"
 +++
 > **TL;DR:**
 > Build your own APIs for serving AI models, covering everything from basic server setup and AI model integration to authentication, database-backed user management, and rate limiting—transforming you from an API consumer to an API producer.

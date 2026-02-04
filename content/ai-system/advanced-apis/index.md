@@ -1,7 +1,11 @@
 +++
-title = "A.2-Advanced APIs in the Era of AI"
+title = "Advanced APIs in the Era of AI"
 date = 2025-09-11
 description = ""
+weight = 12
+
+[extra]
+chapter = "A.2"
 +++
 
 > **TL;DR:**

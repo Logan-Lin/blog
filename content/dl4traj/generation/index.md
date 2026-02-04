@@ -2,6 +2,7 @@
 title = "Trajectory Generation"
 date = 2026-02-04
 description = ""
+weight = 4
 
 [extra]
 chapter = "4"

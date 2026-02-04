@@ -1,7 +1,11 @@
 +++
-title = "B.8-Mini Project"
+title = "Mini Project"
 date = 2025-10-21
 description = ""
+weight = 28
+
+[extra]
+chapter = "B.8"
 +++
 Leveraging the knowledge from the [phase A and B](@/ai-system/_index.md) of this course (and optionally the advanced techniques from the phase C), we will develop and deploy a multi-functional AI API server in our mini project.
 

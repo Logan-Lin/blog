@@ -1,11 +1,11 @@
 +++
 title = "Deep Learning for Trajectory"
-sort_by = "none"
+sort_by = "weight"
 paginate_by = 10
 
 [extra]
 abbr = "DL4traj"
-use_chapter_sort = true
+display_chapter = true
 +++
 
 Deep learning approaches for analysis and utilization of spatiotemporal trajectories.

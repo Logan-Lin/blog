@@ -17,31 +17,25 @@
 {% else %}
 {% set pages = section.pages %}
 {% endif %}
-{% if section.extra.use_chapter_sort %}
-{% set pages = pages | sort(attribute="extra.chapter") %}
 {% for page in pages %}
     <li>
+        {% if section.extra.display_chapter %}
         <span class="chapter">{{ page.extra.chapter }}</span>
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
-    </li>
-{% endfor %}
-{% else %}
-{% for page in pages %}
-    <li>
+        {% else %}
         <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+        {% endif %}
         <a href="{{ page.permalink }}">{{ page.title }}</a>
     </li>
 {% endfor %}
-{% endif %}
 </ul>
 
 {% if paginator %}
 <nav class="pagination">
     {% if paginator.previous %}
-        <a href="{{ paginator.previous }}">&larr; {% if section.extra.use_chapter_sort %}Previous{% else %}Newer{% endif %}</a>
+        <a href="{{ paginator.previous }}">&larr; {% if section.extra.display_chapter %}Previous{% else %}Newer{% endif %}</a>
     {% endif %}
     {% if paginator.next %}
-        <a href="{{ paginator.next }}">{% if section.extra.use_chapter_sort %}Next{% else %}Older{% endif %} &rarr;</a>
+        <a href="{{ paginator.next }}">{% if section.extra.display_chapter %}Next{% else %}Older{% endif %} &rarr;</a>
     {% endif %}
 </nav>
 {% endif %}
