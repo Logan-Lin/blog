@@ -2,6 +2,9 @@
 title = "End-to-end Learning of Trajectories"
 date = 2026-02-02
 description = ""
+
+[extra]
+chapter = "2"
 +++
 
 End-to-end learning means training a model to perform a task from input to output, supervising only on how the output aligns with the task's ground truth.

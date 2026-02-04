@@ -2,6 +2,9 @@
 title = "Trajectory Generation"
 date = 2026-02-04
 description = ""
+
+[extra]
+chapter = "4"
 +++
 
 Trajectory generation, or trajectory synthesis, aims to generate trajectories that are not actually recorded in the available trajectory data, but are still realistic and follow a target distribution.

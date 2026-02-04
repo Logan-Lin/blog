@@ -138,9 +138,16 @@ ul, ol {
     gap: 1rem;
     margin-bottom: 0.5rem;
 
-    time {
+    time, .chapter {
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    .chapter {
+      min-width: 2rem;
+    }
+
+    time {
       min-width: 6rem;
     }
   }
