@@ -5,7 +5,7 @@ description = ""
 weight = 25
 
 [extra]
-chapter = "B.5"
+chapter = "Module B.5"
 +++
 
 > **TL;DR:**

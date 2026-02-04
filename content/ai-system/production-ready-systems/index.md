@@ -5,7 +5,7 @@ description = ""
 weight = 30
 
 [extra]
-chapter = "C"
+chapter = "Phase C"
 +++
 Now you can deploy your AI system on different hardware infrastructures with ease, and also enable everyone in the world to access (and hopefully pay for) your AI services. Now you won't run into situations where your friends are calling you to play CS2 but your laptop is running an AI service so you cannot.
 

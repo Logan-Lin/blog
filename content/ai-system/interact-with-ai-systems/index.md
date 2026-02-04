@@ -5,7 +5,7 @@ description = ""
 weight = 10
 
 [extra]
-chapter = "A"
+chapter = "Phase A"
 +++
 > **TL;DR:**
 > Learn why standardized interactions between applications are essential for making AI models practical in real-world scenarios, moving beyond simple function calls to robust communication methods that work across different programming languages and distributed systems.

@@ -5,7 +5,7 @@ description = ""
 weight = 1
 
 [extra]
-chapter = "1"
+chapter = "Chapter 1"
 +++
 
 A spatiotemporal trajectory is a sequence, with each item being a timestamped location. It records the movement of an object or a human through time and space.

@@ -5,7 +5,7 @@ description = ""
 weight = 31
 
 [extra]
-chapter = "C.9"
+chapter = "Module C.9"
 +++
 > **TL;DR:**
 > When your service goes down, users leave. Learn how to measure availability with industry-standard metrics (MTBF, MTTR), and implement practical strategies like redundancy and backups to keep your AI API running reliably.

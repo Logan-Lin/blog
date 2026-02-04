@@ -2,10 +2,10 @@
 title = "Self-supervised Learning of Trajectories"
 date = 2026-02-03
 description = ""
-weight = 3
+weight = 6
 
 [extra]
-chapter = "3"
+chapter = "Chapter 6"
 +++
 
 Self-supervised learning means training a model with unlabeled data, using supervisory signals extracted from the data itself. It usually does not set the model to perform a certain task, but aims to learn task-agnostic information in the data.

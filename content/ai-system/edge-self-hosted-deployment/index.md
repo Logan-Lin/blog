@@ -5,7 +5,7 @@ description = ""
 weight = 27
 
 [extra]
-chapter = "B.7"
+chapter = "Module B.7"
 +++
 
 > **TL;DR:** Cloud deployment isn't the only option. Learn about edge computing and self-hosted deployment: running AI systems closer to where data is generated or on your own hardware. Discover when these approaches make sense and how to implement them on devices like Raspberry Pi and home servers.
