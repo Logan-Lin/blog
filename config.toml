@@ -6,6 +6,7 @@ compile_sass = true
 minify_html = false
 generate_feeds = true
 feed_filenames = ["rss.xml"]
+ignored_content = ["*.svg", "*.drawio", "*.png", "*.jpg", "*.jpeg"]
 
 [markdown]
 highlighting = { light_theme = "github-light", dark_theme = "github-dark" }
