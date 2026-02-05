@@ -16,7 +16,7 @@ In [API Fundamentals](@/ai-system/api-fundamentals/index.md) we established the 
 > **Example:**
 > When you send a request to OpenAI/Anthropic's API, you wait for a few seconds for the complete response to appear. However, when you interact with ChatGPT/Claude on their official web/mobile app, their responses are continuously streamed to you word-by-word. In reality, the streaming behavior is also achievable through APIs.
 
-![](stream1.gif)
+![](stream1.webp)
 
 In this module, we'll explore advanced API techniques that enable more flexible communication patterns especially relevant for modern AI systems. We'll start with additional fundamentals like rate limiting and versioning, then move to implementing streaming and message-driven protocols. We'll also touch on the shiny new star of AI communication protocols--model context protocol. Finally, we'll examine architectures that make it possible to process high-throughput data efficiently.
 
@@ -146,7 +146,7 @@ The key differences from the regular POST request are:
 
 See it work in action:
 
-![](streaming-demo.gif)
+![](streaming-demo.webp)
 
 > **Extended Reading:**
 > Take a look at the official documents for streaming messages from [OpenAI](https://platform.openai.com/docs/guides/streaming-responses?api-mode=responses) and [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/streaming), which provide different approaches towards implementing SSE-based text streaming.
