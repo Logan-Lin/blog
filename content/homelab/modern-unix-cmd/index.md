@@ -59,7 +59,7 @@ I think there is nothing wrong with the classic `ls`. So, as an alternative, [`e
 
 ![eza list](eza-list.webp)
 
-> `eza` adds icons and color to `ls` command.
+> `eza` adds icons and color to the `ls` command.
 
 It can replace the `tree` command as well.
 

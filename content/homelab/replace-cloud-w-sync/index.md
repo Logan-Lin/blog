@@ -106,7 +106,7 @@ Of course, to save some space, I will always transcode each file to AAC 256k bef
 
 ![foobar2000](foobar2000.webp)
 
-> foobar2000 running on a iPad mini.
+> foobar2000 running on an iPad mini.
 
 ## Limitations
 

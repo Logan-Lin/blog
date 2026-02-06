@@ -220,7 +220,7 @@ I do have a [login display module](https://github.com/Logan-Lin/nix-config/blob/
 
 ![login display](login-display.webp)
 
-> Information displayed when `ssh` login into the server.
+> Information displayed at `ssh` login.
 
 ## Why NixOS?
 
