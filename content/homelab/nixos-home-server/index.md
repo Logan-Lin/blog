@@ -8,6 +8,8 @@ This is a very concise walkthrough of my main home server running NixOS. I assum
 
 ![cover](cover.webp)
 
+> `neofetch` screen of my home server.
+
 My home server (or many would rather call it a NAS) serves common home server purposes: bulk storage, basic file sharing, media streaming service, and photo backup.
 
 ## Physical Setup
@@ -15,6 +17,8 @@ My home server (or many would rather call it a NAS) serves common home server pu
 Below is a recent photo of my home server, living in the utility closet together with my network equipments.
 
 ![server photo](server-photo.webp)
+
+> Real-world photo of the home server.
 
 It is essentially an Intel N305 custom motherboard with SATA back panel and a 3D-printed enclosure. I bought it on Taobao last time I went back to China to visit my family.
 Not very important here, as long as you stick to common hardware, it should be relatively straightforward to install NixOS and replicate my setup.
@@ -187,6 +191,8 @@ For photo backup I use [Immich](https://immich.app/). It is a self-hosted altern
 
 ![immich](immich.webp)
 
+> Web interface of Immich.
+
 Right now Immich is the only service I am running with containers rather than native Nix modules (as you can see in [this configuration file](https://github.com/Logan-Lin/nix-config/blob/master/hosts/nixos/hs/containers.nix)). Technically it is possible to set up Immich with pure Nix modules, but for this type of services that rely on specific versions of databases (in this case, PostgreSQL with vector support), I feel containers are the easier route.
 And to be honest, I don't think there is much benefit going with pure Nix module here (especially for Immich which you can still [declare its config](https://github.com/Logan-Lin/nix-config/blob/master/config/immich.nix) even with containers), other than fulfilling the purism many Nix users seem to have.
 Also, I am not using Docker but Podman instead, which is said to have better integration with NixOS. From my experience it is fairly declarative and efficient, should be practically nearly identical to running directly on the host.
@@ -214,6 +220,8 @@ I do have a [login display module](https://github.com/Logan-Lin/nix-config/blob/
 
 ![login display](login-display.webp)
 
+> Information displayed when `ssh` login into the server.
+
 ## Why NixOS?
 
 This is sort of a conclusion section.
@@ -224,4 +232,5 @@ Compared to other Linux distributions, NixOS is quite suitable for setting up a 
 
 ![terminal comparison](terminal-comparison.webp)
 
+> Local (left) and `ssh`-connected server (right) terminal interface.
 > It looks completely identical (why not), to the point I have to set up visual hints (like the highlighted tmux hostname display) to remind myself which host I am currently on.

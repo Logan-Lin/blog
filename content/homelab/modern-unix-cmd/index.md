@@ -18,9 +18,13 @@ With `cd` aliased to `zoxide`, I only need to type `cd n` (supposing that `~/.co
 
 ![zoxide jump](zoxide-jump.webp)
 
+> Fuzzy directory jump with `zoxide`.
+
 Internally `zoxide` records my visits to directories in a SQLite database and sorts them based on frequency. If the first hit is not what I want, I can also interactively select from the matched list.
 
 ![zoxide select](zoxide-select.webp)
+
+> Candidate selection screen of `zoxide`.
 
 ## `du` -> `ncdu`
 
@@ -31,15 +35,21 @@ It can totally be an alternative to those fancy disk space analyzers as well.
 
 ![ncdu](ncdu.webp)
 
+> Interface of `ncdu`.
+
 ## `top` -> `btop`
 
 `top` is quite basic and looks "unexciting". `htop` also ships with most Unix/Linux systems and looks better.
 
 ![htop](htop.webp)
 
+> The default look of `top`.
+
 [`btop`](https://github.com/aristocratos/btop) might be the most "nerdy-looking" `top` alternative out of the box. It can be a handy tool if you are trying to make people believe you are a hacker.
 
 ![btop](btop.webp)
+
+> Interface of `btop`, with the gruvbox theme.
 
 At the same time, it is very feature-rich and configurable. To some extent, it is also an alternative to bandwidth monitoring tools like `iftop` and disk utilization tools like `df`.
 
@@ -49,9 +59,13 @@ I think there is nothing wrong with the classic `ls`. So, as an alternative, [`e
 
 ![eza list](eza-list.webp)
 
+> `eza` adds icons and color to `ls` command.
+
 It can replace the `tree` command as well.
 
 ![eza tree](eza-tree.webp)
+
+> File tree display of `eza`.
 
 ## `vim` -> `nvim`
 
@@ -65,4 +79,8 @@ Syntax highlighting, file browser, fuzzy search, intelligent autocompletion, deb
 
 ![neovim](nvim-1.webp)
 
+> Interface of `neovim`, with neotree file browser.
+
 ![neovim fuzzy search](nvim-2.webp)
+
+> Interface of `neovim`, with telescope search.
