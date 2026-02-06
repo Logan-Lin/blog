@@ -25,7 +25,7 @@ Also, from my experience, all cloud storage services I've used frequently run in
 
 ![Syncthing web UI](syncthing.webp)
 
-> Web UI of Syncthing.
+{% cap() %}Web UI of Syncthing.{% end %}
 
 ## Examples
 
@@ -40,7 +40,7 @@ Once you use a local file sync service to sync the vault folder of Obsidian, it 
 
 ![Obsidian](obsidian.webp)
 
-> Obsidian desktop UI.
+{% cap() %}Obsidian desktop UI.{% end %}
 
 ### Reference Management: Zotero
 
@@ -48,13 +48,13 @@ Once you use a local file sync service to sync the vault folder of Obsidian, it 
 
 ![Zotero](zotero.webp)
 
-> Zotero desktop UI, showing list of papers.
+{% cap() %}Zotero desktop UI, showing list of papers.{% end %}
 
 Zotero has a built-in cloud sync functionality but their price for storage upgrades is quite high. One thing you might not know is, Zotero stores metadata and attachments in the same folder. You can use Syncthing to sync that folder, and completely ignore the official cloud sync functionality.
 
 ![Zotero folder structure](zotero-files.webp)
 
-> The folder containing both metadata and raw PDF of papers in Zotero.
+{% cap() %}The folder containing both metadata and raw PDF of papers in Zotero.{% end %}
 
 ### Paper Writing: Overleaf vs. Local Text Editor
 
@@ -81,7 +81,7 @@ clean:
 
 ![LaTeX editing](latex.webp)
 
-> LaTeX editing with `neovim` on the left, compiled PDF view on the right.
+{% cap() %}LaTeX editing with `neovim` on the left, compiled PDF view on the right.{% end %}
 
 Overleaf also provides two types of Git integration for you to sync your local changes with Overleaf projects: sync with a GitHub repo, or directly as a remote git repo. It's totally viable to have a mixed setup, where you primarily use local editors and most of your collaborators use Overleaf.
 
@@ -91,7 +91,7 @@ Overleaf also provides two types of Git integration for you to sync your local c
 
 ![Calibre](calibre.webp)
 
-> Calibre desktop UI, showing list of books.
+{% cap() %}Calibre desktop UI, showing list of books.{% end %}
 
 Similar to Zotero, Calibre stores all the books and metadata of a library in a local folder, so there is nothing stopping you from syncing the folder across multiple computers. Although this is something explicitly suggested against by the software (a line when you select the location for a library: "Note that putting the calibre library on a Networked drive is not safe"), from my experience, as long as you don't try to open and modify the same library on two synced computers simultaneously, you won't be running into any issues.
 
@@ -106,7 +106,7 @@ Of course, to save some space, I will always transcode each file to AAC 256k bef
 
 ![foobar2000](foobar2000.webp)
 
-> foobar2000 running on an iPad mini.
+{% cap() %}foobar2000 running on an iPad mini.{% end %}
 
 ## Limitations
 

@@ -26,11 +26,11 @@ The goal of a multi-modal Transformer is to create a model that can accept multi
 
 ![](multi-modal-fusion.webp)
 
-> An example of "conventional" multi-modal fusion. Different modality is processed by separate models and fused at some point. Source: *Xiang, Hao, Runsheng Xu, and Jiaqi Ma. "HM-ViT: Hetero-modal vehicle-to-vehicle cooperative perception with vision transformer." CVPR, 2023.*
+{% cap() %}An example of "conventional" multi-modal fusion. Different modality is processed by separate models and fused at some point. Source: *Xiang, Hao, Runsheng Xu, and Jiaqi Ma. "HM-ViT: Hetero-modal vehicle-to-vehicle cooperative perception with vision transformer." CVPR, 2023.*{% end %}
 
 ![](video-poet.webp)
 
-> An example of a Transformer that can handle multi-modal inputs and outputs. Different modalities are all projected into tokens and subsequently processed by a unified Transformer encoder. Source: *Kondratyuk, Dan, Lijun Yu, et al. "VideoPoet: A Large Language Model for Zero-Shot Video Generation," ICML, 2024.*
+{% cap() %}An example of a Transformer that can handle multi-modal inputs and outputs. Different modalities are all projected into tokens and subsequently processed by a unified Transformer encoder. Source: *Kondratyuk, Dan, Lijun Yu, et al. "VideoPoet: A Large Language Model for Zero-Shot Video Generation," ICML, 2024.*{% end %}
 
 Beyond multi-modal processing, a multi-function Transformer can, for example, function as both a language model (auto-regressive generation) and diffusion denoiser (score-matching generation) simultaneously, supporting two of the most common generation schemes used today.
 
@@ -40,13 +40,13 @@ A fundamental challenge in unifying multiple modalities within a single Transfor
 
 ![](qkv-attention.webp)
 
-> Illustration of the QKV self-attention mechanism in Transformer. [Source](https://en.wikipedia.org/wiki/Attention_(machine_learning))
+{% cap() %}Illustration of the QKV self-attention mechanism in Transformer. [Source](https://en.wikipedia.org/wiki/Attention_(machine_learning)){% end %}
 
 The most common method for mapping language into the embedding space is through tokenization and token embedding. A tokenizer maps a word or word fragment into a discrete token index, and an index-fetching embedding layer (implemented in frameworks like PyTorch with `nn.Embedding`) maps this index into a fixed-dimension embedding vector. In principle, all discrete features can be mapped into the embedding space using this approach.
 
 ![](token-embedding.webp)
 
-> Visualization of tokenizer and index-fetching embedding layer. [Source](https://medium.com/@hunter-j-phillips/the-embedding-layer-27d9c980d124)
+{% cap() %}Visualization of tokenizer and index-fetching embedding layer. [Source](https://medium.com/@hunter-j-phillips/the-embedding-layer-27d9c980d124){% end %}
 
 ### Vector Quantization
 
@@ -121,7 +121,7 @@ One approach to reverse vector quantization is readily available in VQ-VAE, sinc
 
 ![](magvit.webp)
 
-> The encoder-decoder structure of MAGVIT (*Yu et al., "MAGVIT"*), a visual VQ-VAE model. A 3D-VQ encoder quantizes a video into discrete tokens, and a 3D-VQ decoder maps them back to the pixel space.
+{% cap() %}The encoder-decoder structure of MAGVIT (*Yu et al., "MAGVIT"*), a visual VQ-VAE model. A 3D-VQ encoder quantizes a video into discrete tokens, and a 3D-VQ decoder maps them back to the pixel space.{% end %}
 
 ### Efficiency Enhancement
 
@@ -133,7 +133,7 @@ Another workaround follows the idea of compression. Take video generation as an 
 
 ![](video-lavit.webp)
 
-> Keys frames and motion vectors used in *Jin et al., "Video-LaVIT."*
+{% cap() %}Keys frames and motion vectors used in *Jin et al., "Video-LaVIT."*{% end %}
 
 ## Fuse with Diffusion Models
 
@@ -143,7 +143,7 @@ An intriguing question arises: why not integrate the structures of language mode
 
 ![](transfusion.webp)
 
-> A Transformer capable of function as a language model and a diffusion denoiser at the same time. Source: *Zhou, Chunting, Lili Yu, et al. "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model," ICLR, 2025.*
+{% cap() %}A Transformer capable of function as a language model and a diffusion denoiser at the same time. Source: *Zhou, Chunting, Lili Yu, et al. "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model," ICLR, 2025.*{% end %}
 
 ## Conclusion
 

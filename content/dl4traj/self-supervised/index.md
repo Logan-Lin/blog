@@ -14,9 +14,9 @@ This is also very relevant in the context of trajectory learning, since the avai
 
 Self-supervised learning is also widely used to pre-train deep learning models. Put into the perspective of trajectories, self-supervised learning can help models get a general understanding of trajectory sequences or components in trajectories; the pre-trained models can later be fine-tuned on specific tasks, or be used directly for unsupervised tasks like clustering.
 
-<img src="self-supervised.webp" alt="self-supervised" style="max-width: min(500px, 100%);">
+{{ img(src="self-supervised.webp", alt="self-supervised", width="500px") }}
 
-> Illustration of self-supervised learning of spatiotemporal trajectories.
+{% cap() %}Illustration of self-supervised learning of spatiotemporal trajectories.{% end %}
 
 Most widely-adopted self-supervised learning frameworks for trajectories originate from the natural language processing (NLP), graph learning, and computer vision (CV) domains.
 In this post we categorize self-supervised learning methods for trajectories based on the framework they adhere to: static word embedding, graph node embedding, contextual word embedding, auto-encoding, and contrastive learning.
@@ -67,14 +67,14 @@ It constructs the Huffman tree by recursively partitioning the geographic space 
 
 ![poi2vec](poi2vec.webp)
 
-> Construction of the geography-aware binary tree in POI2Vec.
+{% cap() %}Construction of the geography-aware binary tree in POI2Vec.{% end %}
 
 _TALE_ incorporates temporal periodicity with a time-aware hierarchical softmax structure. Many locations exhibit strong temporal patterns: office buildings are visited during work hours, restaurants peak at meal times, and entertainment venues are active at night. TALE captures these patterns by replacing the standard Huffman tree used in hierarchical softmax with a temporal tree.
 The temporal tree has a root node at the top level, followed by time nodes corresponding to equal-length time slices of a day. Below each time node, a Huffman subtree organizes the locations that are visited during that time slice, based on their visit frequencies within that slice.
 
 ![tale](tale.webp)
 
-> The temporal tree in TALE.
+{% cap() %}The temporal tree in TALE.{% end %}
 
 Predicting a visit $(l, t)$ requires traversing a path through this tree, which decomposes into two stages:
 
@@ -175,7 +175,7 @@ The second design is an additional self-supervised objective called masked hour 
 
 ![ctle](ctle.webp)
 
-> The model architecture of CTLE.
+{% cap() %}The model architecture of CTLE.{% end %}
 
 ### Applications: Capturing Location Polysemy
 
@@ -259,7 +259,7 @@ The core idea of contrastive learning is to learn representations by comparing p
 
 ![cmc](cmc.webp)
 
-> Contrasting different views of the same data point versus another data point in contrastive multiview coding.
+{% cap() %}Contrasting different views of the same data point versus another data point in contrastive multiview coding.{% end %}
 
 The _contrastive multiview coding_ framework formalizes this with the InfoNCE loss. Given a data point $\mathbf{x}$, we apply two different augmentations to obtain views $\mathbf{x}^{(1)}$ and $\mathbf{x}^{(2)}$. An encoder $f$ maps each view to an embedding, and the model is trained to identify the positive pair among a set of negatives. For a batch of $N$ data points, the loss for a positive pair $(i, j)$ is:
 

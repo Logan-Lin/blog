@@ -18,13 +18,13 @@ With `cd` aliased to `zoxide`, I only need to type `cd n` (supposing that `~/.co
 
 ![zoxide jump](zoxide-jump.webp)
 
-> Fuzzy directory jump with `zoxide`.
+{% cap() %}Fuzzy directory jump with `zoxide`.{% end %}
 
 Internally `zoxide` records my visits to directories in a SQLite database and sorts them based on frequency. If the first hit is not what I want, I can also interactively select from the matched list.
 
 ![zoxide select](zoxide-select.webp)
 
-> Candidate selection screen of `zoxide`.
+{% cap() %}Candidate selection screen of `zoxide`.{% end %}
 
 ## `du` -> `ncdu`
 
@@ -35,7 +35,7 @@ It can totally be an alternative to those fancy disk space analyzers as well.
 
 ![ncdu](ncdu.webp)
 
-> Interface of `ncdu`.
+{% cap() %}Interface of `ncdu`.{% end %}
 
 ## `top` -> `btop`
 
@@ -43,13 +43,13 @@ It can totally be an alternative to those fancy disk space analyzers as well.
 
 ![htop](htop.webp)
 
-> The default look of `top`.
+{% cap() %}The default look of `top`.{% end %}
 
 [`btop`](https://github.com/aristocratos/btop) might be the most "nerdy-looking" `top` alternative out of the box. It can be a handy tool if you are trying to make people believe you are a hacker.
 
 ![btop](btop.webp)
 
-> Interface of `btop`, with the gruvbox theme.
+{% cap() %}Interface of `btop`, with the gruvbox theme.{% end %}
 
 At the same time, it is very feature-rich and configurable. To some extent, it is also an alternative to bandwidth monitoring tools like `iftop` and disk utilization tools like `df`.
 
@@ -59,13 +59,13 @@ I think there is nothing wrong with the classic `ls`. So, as an alternative, [`e
 
 ![eza list](eza-list.webp)
 
-> `eza` adds icons and color to the `ls` command.
+{% cap() %}`eza` adds icons and color to the `ls` command.{% end %}
 
 It can replace the `tree` command as well.
 
 ![eza tree](eza-tree.webp)
 
-> File tree display of `eza`.
+{% cap() %}File tree display of `eza`.{% end %}
 
 ## `vim` -> `nvim`
 
@@ -79,8 +79,8 @@ Syntax highlighting, file browser, fuzzy search, intelligent autocompletion, deb
 
 ![neovim](nvim-1.webp)
 
-> Interface of `neovim`, with neotree file browser.
+{% cap() %}Interface of `neovim`, with neotree file browser.{% end %}
 
 ![neovim fuzzy search](nvim-2.webp)
 
-> Interface of `neovim`, with telescope search.
+{% cap() %}Interface of `neovim`, with telescope search.{% end %}

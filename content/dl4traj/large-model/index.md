@@ -33,7 +33,7 @@ where each $t_i \in \{1, 2, \ldots, |\mathcal{V}|\}$ is an index into the vocabu
 
 ![token](./token.webp)
 
-> An example of tokenized sentences. Source: [Tiktokenizer](https://tiktokenizer.vercel.app/)
+{% cap() %}An example of tokenized sentences. Source: [Tiktokenizer](https://tiktokenizer.vercel.app/){% end %}
 
 Different tokenization strategies exist, each with trade-offs between vocabulary size and sequence length. Word-level tokenization is intuitive but requires a very large vocabulary. Character-level tokenization has a small vocabulary but produces very long sequences. Modern LLMs use subword tokenization, which breaks words into meaningful subunits that balance vocabulary size and sequence length. For a detailed treatment of tokenization, see [Karpathy's tutorial](https://www.youtube.com/watch?v=zduSFxRajkE).
 
@@ -62,7 +62,7 @@ The dot product of two rotated vectors depends only on the difference of their r
 
 ![rope](./rope-rotation.webp)
 
-> RoPE encodes positional information by rotating input vectors.
+{% cap() %}RoPE encodes positional information by rotating input vectors.{% end %}
 
 This relative formulation improves generalization to longer sequences. A model trained on sequences up to length $L$ has learned to interpret relative distances up to $L$. When processing longer sequences at inference time, it can still reason about token pairs whose relative distance falls within the trained range, even if their absolute positions exceed $L$. Various techniques like positional interpolation and YaRN further extend this capability by carefully scaling the rotation frequencies.
 
@@ -85,7 +85,7 @@ There are also hybrid approaches that combine both objectives. For example, GLM 
 
 ![glm](glm.webp)
 
-> Blank-infilling objective used by GLM.
+{% cap() %}Blank-infilling objective used by GLM.{% end %}
 
 > **References:**
 > - Vaswani, Ashish, Noam Shazeer, Niki Parmar, et al. "Attention Is All You Need."
@@ -164,7 +164,7 @@ where {% m() %}\mathbf{e}_i{% end %} is the query and {% m() %}\mathbf{E}_{\text
 
 ![trajcogn](./trajcogn.webp)
 
-> The reprogramming module and anchor words in TrajCogn.
+{% cap() %}The reprogramming module and anchor words in TrajCogn.{% end %}
 
 An alternative approach is to directly serialize trajectory features into text and feed them through the LLM's native tokenizer. For features that are already textual, such as POI names or addresses, this is straightforward. For continuous features like coordinates, one can simply convert numbers to their string representations. This technically works, but LLMs are not well-known for their ability to reason about raw numbers, let alone spatial relationships encoded in coordinate pairs. A trajectory represented as a sequence of "(lat, lng)" strings may be parseable by the model, but whether it can extract meaningful spatial patterns from such input is questionable.
 
@@ -172,7 +172,7 @@ To address this limitation, one can transform trajectory data into modalities th
 
 ![traj-mllm](./trajmllm.webp)
 
-> Mixture of textual and visual representations of trajectory features in Traj-MLLM.
+{% cap() %}Mixture of textual and visual representations of trajectory features in Traj-MLLM.{% end %}
 
 ### Efficient Fine-tuning on Trajectories
 
@@ -213,7 +213,7 @@ Here $g_{[m]}$ represents missing points between $g_1$ and $g_4$, and the model 
 
 ![uvtm](./uvtm.webp)
 
-> Implementation of the above generation paradigm in UVTM.
+{% cap() %}Implementation of the above generation paradigm in UVTM.{% end %}
 
 Under this formulation, we can frame different tasks with different masking patterns. For origin-destination travel time estimation, the input is $(l_o, t_o, [m]), (l_d, [m], [m])$, where only the origin coordinate, departure time, and destination coordinate are known, and the model generates the arrival time as part of the destination tuple. For trajectory recovery, known sparse points have complete tuples while gaps between them are marked with $g_{[m]}$, and the model generates the intermediate points. For trajectory prediction, historical points are complete and a single $g_{[m]}$ at the end signals that future points should be generated.
 

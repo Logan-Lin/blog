@@ -12,7 +12,7 @@ A spatiotemporal trajectory is a sequence, with each item being a timestamped lo
 
 ![trajectory](trajectory.webp)
 
-> Examples of human (left) and vehicle (right) trajectories.
+{% cap() %}Examples of human (left) and vehicle (right) trajectories.{% end %}
 
 With the development of technologies and devices that can record trajectories, such as GPS-equipped mobile phones, human society has gathered large-scale trajectory data.
 Such data can be valuable for traffic planning and city development.
@@ -80,7 +80,7 @@ Anomaly detection identifies paths or behaviors that deviate from normal pattern
 
 ![tasks](tasks.webp)
 
-> Illustration of trajectory-related tasks.
+{% cap() %}Illustration of trajectory-related tasks.{% end %}
 
 ## Deep Learning for Trajectories
 

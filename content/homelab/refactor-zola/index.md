@@ -9,7 +9,7 @@ Not anymore, since last night I refactored the whole site using [Zola](https://g
 
 ![compare](compare.webp)
 
-> Comparison of how the blog site looks before (left) and after (right) the refactor.
+{% cap() %}Comparison of how the blog site looks before (left) and after (right) the refactor.{% end %}
 
 Aside from artistic changes, the main reason behind this refactor is to use a static site generator (SSG) that has fewer dependencies and straight-forward control of templates.
 I will dive deeper into the rationale and the refactor process below.
@@ -74,4 +74,4 @@ Zola itself is very lightweight. As for the generated blog site, the only extern
 
 ![compare-speed](compare-speed.webp)
 
-> Load speed comparison of my homepage and the refactored blog site.
+{% cap() %}Load speed comparison of my homepage and the refactored blog site.{% end %}

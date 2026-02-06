@@ -11,16 +11,16 @@ chapter = "Chapter 5"
 End-to-end learning means training a model to perform a task from input to output, supervising only on how the output aligns with the task's ground truth.
 End-to-end is typically the most straightforward option for building a deep learning method for a certain task, and that also applies to most tasks related to spatiotemporal trajectories.
 
-<img src="end-to-end.webp" alt="end-to-end" style="max-width: min(500px, 100%);">
+{{ img(src="end-to-end.webp", alt="end-to-end", width="500px") }}
 
-> Illustration of end-to-end learning of spatiotemporal trajectories.
+{% cap() %}Illustration of end-to-end learning of spatiotemporal trajectories.{% end %}
 
 In this post we will categorize end-to-end learning tasks of trajectories from a technical standpoint: prediction, classification, and imputation.
 For each category of tasks, we will give a general problem formulation and the general framework for solving it, and briefly discuss the motivation and use case of more specific downstream applications that fit into the category.
 
 ![categories](categories.webp)
 
-> Schema overview of the three categories of end-to-end trajectory learning tasks.
+{% cap() %}Schema overview of the three categories of end-to-end trajectory learning tasks.{% end %}
 
 {{ toc() }}
 
