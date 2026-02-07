@@ -12,7 +12,7 @@
 Image with max-width constraint. `width` defaults to `500px`:
 
 ```md
-{% img(src="./diagram.png", alt="Architecture", width="600px") %}
+{{ img(src="./diagram.png", alt="Architecture", width="600px") }}
 ```
 
 Figure caption:
