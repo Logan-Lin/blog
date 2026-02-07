@@ -259,28 +259,26 @@ Below are some preliminary results I obtained from a set of amorphous material g
 ![SDE shortcut results](sde-results.webp)
 {% cap() %}Structural functions of generated materials, sampled in 10 steps.{% end %}
 
----
-
-## References
-
-1. Holderrieth and Erives, "An Introduction to Flow Matching and Diffusion Models."
-2. Song and Ermon, "Generative Modeling by Estimating Gradients of the Data Distribution."
-3. Rezende, Danilo, and Shakir Mohamed. "Variational inference with normalizing flows."
-4. https://en.wikipedia.org/wiki/Differential_equation
-5. https://en.wikipedia.org/wiki/Brownian_motion
-6. https://en.wikipedia.org/wiki/Vector_field
-7. https://en.wikipedia.org/wiki/Vector_flow
-8. https://en.wikipedia.org/wiki/Ordinary_differential_equation
-9. https://en.wikipedia.org/wiki/Stochastic_differential_equation
-10. https://en.wikipedia.org/wiki/Euler_method
-11. https://github.com/rtqichen/torchdiffeq
-12. Lipman, Yaron, et al. "Flow matching for generative modeling."
-13. Frans, Kevin, et al. "One step diffusion via shortcut models."
-14. Geng, Zhengyang, et al. "Mean Flows for One-step Generative Modeling."
-15. Liu, Xingchao, Chengyue Gong, and Qiang Liu. "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow."
-16. Ho, Jonathan, Ajay Jain, and Pieter Abbeel. "Denoising diffusion probabilistic models."
-17. https://en.wikipedia.org/wiki/Diffusion_process
-18. Huang et al., "Symbolic Music Generation with Non-Differentiable Rule Guided Diffusion."
-19. https://en.wikipedia.org/wiki/Euler–Maruyama_method
-20. Song et al., "Score-Based Generative Modeling through Stochastic Differential Equations."
-21. https://en.wikipedia.org/wiki/Informant_(statistics)
+> **References:**
+> 
+> 1. Holderrieth and Erives, "An Introduction to Flow Matching and Diffusion Models."
+> 2. Song and Ermon, "Generative Modeling by Estimating Gradients of the Data Distribution."
+> 3. Rezende, Danilo, and Shakir Mohamed. "Variational inference with normalizing flows."
+> 4. https://en.wikipedia.org/wiki/Differential_equation
+> 5. https://en.wikipedia.org/wiki/Brownian_motion
+> 6. https://en.wikipedia.org/wiki/Vector_field
+> 7. https://en.wikipedia.org/wiki/Vector_flow
+> 8. https://en.wikipedia.org/wiki/Ordinary_differential_equation
+> 9. https://en.wikipedia.org/wiki/Stochastic_differential_equation
+> 10. https://en.wikipedia.org/wiki/Euler_method
+> 11. https://github.com/rtqichen/torchdiffeq
+> 12. Lipman, Yaron, et al. "Flow matching for generative modeling."
+> 13. Frans, Kevin, et al. "One step diffusion via shortcut models."
+> 14. Geng, Zhengyang, et al. "Mean Flows for One-step Generative Modeling."
+> 15. Liu, Xingchao, Chengyue Gong, and Qiang Liu. "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow."
+> 16. Ho, Jonathan, Ajay Jain, and Pieter Abbeel. "Denoising diffusion probabilistic models."
+> 17. https://en.wikipedia.org/wiki/Diffusion_process
+> 18. Huang et al., "Symbolic Music Generation with Non-Differentiable Rule Guided Diffusion."
+> 19. https://en.wikipedia.org/wiki/Euler–Maruyama_method
+> 20. Song et al., "Score-Based Generative Modeling through Stochastic Differential Equations."
+> 21. https://en.wikipedia.org/wiki/Informant_(statistics)

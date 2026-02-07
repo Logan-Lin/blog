@@ -96,12 +96,9 @@ Seeing the insane computational load required by LLMs, there are lots of techniq
 - Learning Rate Schedule: A modified trapezoidal (Warmup-Stable-Decay) schedule with a short warmup period, constant learning rate for the majority of training, and a decay phase at the end
 - Batch Size Schedule: Gradually increases batch size during training from smaller to larger values; this can accelerate training progress by updating weights more frequently in early stages with smaller batches.
 
----
-
-## References
-
-1. Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference (2025). Warner, Benjamin and Chaffin, Antoine and Clavié, Benjamin and Weller, Orion and Hallstr"om, Oskar and Taghadouini, Said and Gallagher, Alexis and Biswas, Raja and Ladhak, Faisal and Aarsen, Tom and Adams, Griffin Thomas and Howard, Jeremy and Poli, Iacopo.
-2. NeoBERT: A Next Generation BERT (2025). Breton, Lola Le and Fournier, Quentin and Morris, John Xavier and Mezouar, Mariam El and Chandar, Sarath.
-3. Nomic Embed: Training a Reproducible Long Context Text Embedder (2025). Nussbaum, Zach and Morris, John Xavier and Mulyar, Andriy and Duderstadt, Brandon.
-4. Unveiling the Potential of BERT-family: A New Recipe for Building Scalable, General and Competitive Large Language Models (2025). Xiao, Yisheng and Li, Juntao and Hu, Wenpeng and Luo, Zhunchen and Zhang, Min.
+> **References:**
+> 1. Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference (2025). Warner, Benjamin and Chaffin, Antoine and Clavié, Benjamin and Weller, Orion and Hallstr"om, Oskar and Taghadouini, Said and Gallagher, Alexis and Biswas, Raja and Ladhak, Faisal and Aarsen, Tom and Adams, Griffin Thomas and Howard, Jeremy and Poli, Iacopo.
+> 2. NeoBERT: A Next Generation BERT (2025). Breton, Lola Le and Fournier, Quentin and Morris, John Xavier and Mezouar, Mariam El and Chandar, Sarath.
+> 3. Nomic Embed: Training a Reproducible Long Context Text Embedder (2025). Nussbaum, Zach and Morris, John Xavier and Mulyar, Andriy and Duderstadt, Brandon.
+> 4. Unveiling the Potential of BERT-family: A New Recipe for Building Scalable, General and Competitive Large Language Models (2025). Xiao, Yisheng and Li, Juntao and Hu, Wenpeng and Luo, Zhunchen and Zhang, Min.
 

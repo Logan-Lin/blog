@@ -164,12 +164,10 @@ LongRoPE also introduces a progressive extension strategy. Rather than jumping d
 
 ![](longrope.webp)
 
----
-
-## References
-
-1. RoFormer: Enhanced transformer with Rotary Position Embedding (2024). Su, Jianlin and Ahmed, Murtadha and Lu, Yu and Pan, Shengfeng and Bo, Wen and Liu, Yunfeng.
-2. Extending context window of large language models via positional interpolation (2023). Chen, Shouyuan and Wong, Sherman and Chen, Liangjian and Tian, Yuandong.
-3. YaRN: Efficient Context Window Extension of Large Language Models (2023). Peng, Bowen and Quesnelle, Jeffrey and Fan, Honglu and Shippole, Enrico.
-4. Resonance rope: Improving context length generalization of large language models (2024). Wang, Suyuchen and Kobyzev, Ivan and Lu, Peng and Rezagholizadeh, Mehdi and Liu, Bang.
-5. LongRoPE: Extending LLM Context Window Beyond 3 Million Tokens (2024). Ding, Yiran and Zhang, Li Lyna and Zhang, Chengruidong and Xu, Yuanyuan and Shang, Ning and Xu, Jiahang and Yang, Fan and Yang, Mao.
+> **References:**
+>
+> 1. RoFormer: Enhanced transformer with Rotary Position Embedding (2024). Su, Jianlin and Ahmed, Murtadha and Lu, Yu and Pan, Shengfeng and Bo, Wen and Liu, Yunfeng.
+> 2. Extending context window of large language models via positional interpolation (2023). Chen, Shouyuan and Wong, Sherman and Chen, Liangjian and Tian, Yuandong.
+> 3. YaRN: Efficient Context Window Extension of Large Language Models (2023). Peng, Bowen and Quesnelle, Jeffrey and Fan, Honglu and Shippole, Enrico.
+> 4. Resonance rope: Improving context length generalization of large language models (2024). Wang, Suyuchen and Kobyzev, Ivan and Lu, Peng and Rezagholizadeh, Mehdi and Liu, Bang.
+> 5. LongRoPE: Extending LLM Context Window Beyond 3 Million Tokens (2024). Ding, Yiran and Zhang, Li Lyna and Zhang, Chengruidong and Xu, Yuanyuan and Shang, Ning and Xu, Jiahang and Yang, Fan and Yang, Mao.
